@@ -1,60 +1,51 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
+"--------------------
+" Core
+"--------------------
+syntax on                   " syntax highlighting
+set nocompatible            " be iMproved, required
+filetype off                " required
+filetype plugin indent on   " required
+colorscheme gruvbox         " current color-scheme
+"--------------------
+" Plugins
+"--------------------
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
+" Plugin managers
 Plugin 'VundleVim/Vundle.vim'
+" let Vundle manage Vundle, required
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-
+" Git
+"---------
+" Better UI for git functions
 Plugin 'tpope/vim-fugitive'
-
-" Friendlier user interface for git piggybacking off of vim-fugitive
+" Extended, friendlier user interface for git piggybacking off of vim-fugitive
 Plugin 'idanarye/vim-merginal'
 
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-
-" Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
-
-" git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-
-" Pass the path to set the runtimepath properly.
-" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
+" Visual
+"---------
 Plugin 'tomasiser/vim-code-dark'
-" https://github.com/tomasiser/vim-code-dark#installation"
+" Vim colorschemes
+Plugin 'flazz/vim-colorschemes'
+" Indent guides plugin
+Plugin 'nathanaelkane/vim-indent-guides'
+" Plugin for statusline configuration in vim
+Plugin 'vim-airline/vim-airline'
+
+" Language
+"---------
+" Plugin for GraphQL file detection, syntax highlighting, etc
+Plugin 'jparise/vim-graphql'
 
 " Plugin for autocomplete engine
 Plugin 'Valloric/YouCompleteMe'
 
-" Plugin for GraphQL file detection, syntax highlighting, etc
-Plugin 'jparise/vim-graphql'
-
-" Vim colorschemes
-Plugin 'flazz/vim-colorschemes'
-
-" Indent guides plugin
-Plugin 'nathanaelkane/vim-indent-guides'
-
-" Plugin for statusline configuration in vim
-Plugin 'vim-airline/vim-airline'
-
-" All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
+
+"--------------------
+" Plugin options
+"--------------------
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -65,17 +56,23 @@ filetype plugin indent on    " required
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+
+" NERDTree
+let NERDTreeShowLineNumbers=1
+" enable NERDTree open on startup
+" autocmd VimEnter * NERDTree
+
+" vim-indent-guides
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_guide_size = 1
 
 " FZF
 set rtp+=/usr/local/opt/fzf
-
-" personal-config
-colorscheme gruvbox
+nnoremap <C-p> :FZF<CR>
 
 " Pathogen plugin manager
 execute pathogen#infect()
-syntax on
 filetype plugin indent on
 call pathogen#helptags()
 
@@ -113,16 +110,3 @@ set expandtab
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
-" enable line numbers
-let NERDTreeShowLineNumbers=1
-
-" enable NERDTree open on startup
-" autocmd VimEnter * NERDTree
-
-" vim-indent-guides settings
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_auto_colors = 0
-let g:indent_guides_guide_size = 1
-
-" fzf
-nnoremap <C-p> :FZF<CR>
