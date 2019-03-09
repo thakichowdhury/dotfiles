@@ -69,7 +69,7 @@ colorscheme gruvbox                         " current color-scheme
 " NERDTree
 let NERDTreeShowLineNumbers=1               " Map CTRL + n to toggle NERDTree
 let NERDTreeShowBookmarks=1                 " Open NERDTree bookmark by default
-:let g:NERDTreeWinSize=40                   " Increase default width of nerdTree buffer
+let g:NERDTreeWinSize=40                   " Increase default width of nerdTree buffer
 nmap <C-n> :NERDTreeToggle<CR>
 "" autocmd VimEnter * NERDTree              " enable NERDTree open on startup
 
