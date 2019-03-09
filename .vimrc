@@ -9,7 +9,6 @@ set tabstop=2                               " show existing tab with 2 spaces wi
 set shiftwidth=2                            " when indenting with '>', use 2 spaces width
 set expandtab                               " on pressing tab, insert 2 spaces
 
-
 filetype off                                " required
 filetype plugin indent on                   " required
 
@@ -41,8 +40,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Git
 "---------
-Plugin 'tpope/vim-fugitive'                 " Better UI for git functions
-Plugin 'idanarye/vim-merginal'              " Extended, friendlier user interface for git piggybacking off of vim-fugitive
+Plugin 'tpope/vim-fugitive'                 " better UI for git functions
+Plugin 'idanarye/vim-merginal'              " extended, friendlier user interface for git piggybacking off of vim-fugitive
 
 " Navigation
 Plugin 'scrooloose/nerdtree'                " tree file manager for vim
@@ -50,21 +49,29 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'        " shows git status of files within N
 
 " Visual
 "---------
-Plugin 'flazz/vim-colorschemes'             " Vim colorschemes
-Plugin 'nathanaelkane/vim-indent-guides'    " Indent guides plugin
-Plugin 'vim-airline/vim-airline'            " Plugin for statusline configuration in vim
+Plugin 'flazz/vim-colorschemes'             " vim colorschemes
+Plugin 'nathanaelkane/vim-indent-guides'    " indent guides plugin
+Plugin 'vim-airline/vim-airline'            " statusline configuration in vim
+Plugin 'vim-airline/vim-airline-themes'     " themes for vim-airline
+Plugin 'airblade/vim-gitgutter'             " shows a git diff in the gutter
+Plugin 'morhetz/gruvbox'                    " gruvbox theme
 
 " Language
 "---------
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
+Plugin 'neoclide/vim-jsx-improve'
+"" Plugin 'pangloss/vim-javascript'
+"" Plugin 'mxw/vim-jsx'
 Plugin 'jparise/vim-graphql'
+
+" Utility
+Plugin 'w0rp/ale'                           " asynchronous linting/fixing
+Plugin 'SirVer/ultisnips'                   " snippet manager
 
 " Files
 Plugin 'Valloric/YouCompleteMe'             " auto-suggestion/completion engine
 
 " Defaults
-Plugin 'tpope/vim-sensible'                 " set of sensible default configs for vim
+Plugin 'tpope/vim-sensible'                 " set of sensible default configs
 
 call vundle#end()
 
@@ -88,6 +95,11 @@ nmap <C-m> :MerginalToggle<CR>
 " FZF
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-p> :FZF<CR>
+
+" Airline
+let g:airline_theme = 'gruvbox'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
