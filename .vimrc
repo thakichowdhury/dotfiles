@@ -7,6 +7,14 @@ set backspace=indent,eol,start              " Set backspace to delete
 set number                                  " Set line numbers to show
 filetype off                                " required
 filetype plugin indent on                   " required
+set tabstop=2                               " show existing tab with 2 spaces width
+set shiftwidth=2                            " when indenting with '>', use 2 spaces width
+set expandtab                               " on pressing tab, insert 2 spaces
+
+" Omni completion
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
 inoremap jk <ESC>
 
 "--------------------
@@ -81,18 +89,3 @@ let g:indent_guides_guide_size = 1
 " FZF
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-p> :FZF<CR>
-
-
-" Set tab and indents to 2 spaces
-filetype plugin indent on
-" show existing tab with 2 spaces width
-set tabstop=2
-" when indenting with '>', use 2 spaces width
-set shiftwidth=2
-" On pressing tab, insert 2 spaces
-set expandtab
-
-" Omni completion
-filetype plugin on
-set omnifunc=syntaxcomplete#Complete
-
