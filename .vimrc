@@ -59,7 +59,7 @@ call vundle#end()
 "--------------------
 " Visual
 "--------------------
-colorscheme gruvbox         " current color-scheme
+colorscheme gruvbox                         " current color-scheme
 "--------------------
 " Plugin options
 "--------------------
@@ -75,17 +75,21 @@ colorscheme gruvbox         " current color-scheme
 " see :h vundle for more details or wiki for FAQ
 
 " NERDTree
-let NERDTreeShowLineNumbers=1   " Map CTRL + n to toggle NERDTree
-let NERDTreeShowBookmarks=1     " Open NERDTree bookmark by default
-:let g:NERDTreeWinSize=40       " Increase default width of nerdTree buffer
+let NERDTreeShowLineNumbers=1               " Map CTRL + n to toggle NERDTree
+let NERDTreeShowBookmarks=1                 " Open NERDTree bookmark by default
+:let g:NERDTreeWinSize=40                   " Increase default width of nerdTree buffer
 nmap <C-n> :NERDTreeToggle<CR>
-"" autocmd VimEnter * NERDTree   " enable NERDTree open on startup
+"" autocmd VimEnter * NERDTree              " enable NERDTree open on startup
+
+" Merginal
+let g:merginal_windowWidth = 100            " set Merginal side window width
+nmap <C-m> :MerginalToggle<CR>
+
+" FZF
+set rtp+=/usr/local/opt/fzf
+nnoremap <C-p> :FZF<CR>
 
 " vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_guide_size = 1
-
-" FZF
-set rtp+=/usr/local/opt/fzf
-nnoremap <C-p> :FZF<CR>
