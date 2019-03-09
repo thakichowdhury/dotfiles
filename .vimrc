@@ -8,6 +8,8 @@ set number                                  " Set line numbers to show
 set tabstop=2                               " show existing tab with 2 spaces width
 set shiftwidth=2                            " when indenting with '>', use 2 spaces width
 set expandtab                               " on pressing tab, insert 2 spaces
+set encoding=UTF-8                          " set encoding to utf-8 for fonts/icons
+set guifont=FantasqueSansMono:h13
 
 filetype off                                " required
 filetype plugin indent on                   " required
@@ -27,53 +29,55 @@ set guicursor=n-v-c:block-Cursor
 set guicursor+=i:ver100-iCursor
 set guicursor+=n-v-c:blinkon1
 set guicursor+=i:blinkwait10
-
 "--------------------
 " Plugins
 "--------------------
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-" Plugin managers
-Plugin 'VundleVim/Vundle.vim'
+" Plug managers
+Plug 'VundleVim/Vundle.vim'
 " let Vundle manage Vundle, required
 
 " Git
 "---------
-Plugin 'tpope/vim-fugitive'                 " better UI for git functions
-Plugin 'idanarye/vim-merginal'              " extended, friendlier user interface for git piggybacking off of vim-fugitive
+Plug 'tpope/vim-fugitive'                 " better UI for git functions
+Plug 'idanarye/vim-merginal'              " extended, friendlier user interface for git piggybacking off of vim-fugitive
 
 " Navigation
-Plugin 'scrooloose/nerdtree'                " tree file manager for vim
-Plugin 'Xuyuanp/nerdtree-git-plugin'        " shows git status of files within NERDTree
+Plug 'scrooloose/nerdtree'                " tree file manager for vim
+Plug 'Xuyuanp/nerdtree-git-plugin'        " shows git status of files within NERDTree
 
 " Visual
 "---------
-Plugin 'flazz/vim-colorschemes'             " vim colorschemes
-Plugin 'nathanaelkane/vim-indent-guides'    " indent guides plugin
-Plugin 'vim-airline/vim-airline'            " statusline configuration in vim
-Plugin 'vim-airline/vim-airline-themes'     " themes for vim-airline
-Plugin 'airblade/vim-gitgutter'             " shows a git diff in the gutter
-Plugin 'morhetz/gruvbox'                    " gruvbox theme
+Plug 'nathanaelkane/vim-indent-guides'    " indent guides plugin
+Plug 'tpope/vim-commentary'               " help comment out lines
+Plug 'vim-airline/vim-airline'            " statusline configuration in vim
+Plug 'vim-airline/vim-airline-themes'     " themes for vim-airline
+Plug 'airblade/vim-gitgutter'             " shows a git diff in the gutter
+Plug 'flazz/vim-colorschemes'             " vim colorschemes
+Plug 'morhetz/gruvbox'                    " gruvbox theme
 
 " Language
 "---------
-Plugin 'neoclide/vim-jsx-improve'
-"" Plugin 'pangloss/vim-javascript'
-"" Plugin 'mxw/vim-jsx'
-Plugin 'jparise/vim-graphql'
+Plug 'neoclide/vim-jsx-improve'
+"" Plug 'pangloss/vim-javascript'
+"" Plug 'mxw/vim-jsx'
+Plug 'jparise/vim-graphql'
 
 " Utility
-Plugin 'w0rp/ale'                           " asynchronous linting/fixing
-Plugin 'SirVer/ultisnips'                   " snippet manager
+Plug 'w0rp/ale'                           " asynchronous linting/fixing
+Plug 'SirVer/ultisnips'                   " snippet manager
 
 " Files
-Plugin 'Valloric/YouCompleteMe'             " auto-suggestion/completion engine
+Plug 'Valloric/YouCompleteMe'             " auto-suggestion/completion engine
 
 " Defaults
-Plugin 'tpope/vim-sensible'                 " set of sensible default configs
+Plug 'tpope/vim-sensible'                 " set of sensible default configs
 
-call vundle#end()
+Plug 'ryanoasis/vim-devicons'
+
+call plug#end()
 
 "--------------------
 " Visual
@@ -106,13 +110,13 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_guide_size = 1
 
-" Plugin options
+" Plug options
 "--------------------
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
 " Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+" :PlugList       - lists configured plugins
+" :PlugInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PlugSearch foo - searches for foo; append `!` to refresh local cache
+" :PlugClean      - confirms removal of unused plugins; append `!` to auto-approve removal
