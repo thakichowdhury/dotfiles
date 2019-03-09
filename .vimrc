@@ -5,15 +5,19 @@ syntax on                                   " syntax highlighting
 set nocompatible                            " be iMproved, required
 set backspace=indent,eol,start              " Set backspace to delete
 set number                                  " Set line numbers to show
-filetype off                                " required
-filetype plugin indent on                   " required
 set tabstop=2                               " show existing tab with 2 spaces width
 set shiftwidth=2                            " when indenting with '>', use 2 spaces width
 set expandtab                               " on pressing tab, insert 2 spaces
 
+
+filetype off                                " required
+filetype plugin indent on                   " required
+
 " Omni completion
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
+
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o  " disable auto comment for all sessions
 
 inoremap jk <ESC>
 
