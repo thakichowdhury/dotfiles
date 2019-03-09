@@ -21,6 +21,14 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o  
 
 inoremap jk <ESC>
 
+" Configure cursor
+highlight Cursor guifg=white guibg=black
+highlight iCursor guifg=white guibg=steelblue
+set guicursor=n-v-c:block-Cursor
+set guicursor+=i:ver100-iCursor
+set guicursor+=n-v-c:blinkon1
+set guicursor+=i:blinkwait10
+
 "--------------------
 " Plugins
 "--------------------
@@ -69,7 +77,7 @@ colorscheme gruvbox                         " current color-scheme
 " NERDTree
 let NERDTreeShowLineNumbers=1               " Map CTRL + n to toggle NERDTree
 let NERDTreeShowBookmarks=1                 " Open NERDTree bookmark by default
-let g:NERDTreeWinSize=40                   " Increase default width of nerdTree buffer
+let g:NERDTreeWinSize=40                    " Increase default width of nerdTree buffer
 nmap <C-n> :NERDTreeToggle<CR>
 "" autocmd VimEnter * NERDTree              " enable NERDTree open on startup
 
