@@ -1,11 +1,14 @@
 "--------------------
 " Core
 "--------------------
-syntax on                   " syntax highlighting
-set nocompatible            " be iMproved, required
-filetype off                " required
-filetype plugin indent on   " required
-colorscheme gruvbox         " current color-scheme
+syntax on                                   " syntax highlighting
+set nocompatible                            " be iMproved, required
+set backspace=indent,eol,start              " Set backspace to delete
+set number                                  " Set line numbers to show
+filetype off                                " required
+filetype plugin indent on                   " required
+inoremap jk <ESC>
+
 "--------------------
 " Plugins
 "--------------------
@@ -18,31 +21,37 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Git
 "---------
-" Better UI for git functions
-Plugin 'tpope/vim-fugitive'
-" Extended, friendlier user interface for git piggybacking off of vim-fugitive
-Plugin 'idanarye/vim-merginal'
+Plugin 'tpope/vim-fugitive'                 " Better UI for git functions
+Plugin 'idanarye/vim-merginal'              " Extended, friendlier user interface for git piggybacking off of vim-fugitive
+
+" Navigation
+Plugin 'scrooloose/nerdtree'                " tree file manager for vim
+Plugin 'Xuyuanp/nerdtree-git-plugin'        " shows git status of files within NERDTree
 
 " Visual
 "---------
-Plugin 'tomasiser/vim-code-dark'
-" Vim colorschemes
-Plugin 'flazz/vim-colorschemes'
-" Indent guides plugin
-Plugin 'nathanaelkane/vim-indent-guides'
-" Plugin for statusline configuration in vim
-Plugin 'vim-airline/vim-airline'
+Plugin 'flazz/vim-colorschemes'             " Vim colorschemes
+Plugin 'nathanaelkane/vim-indent-guides'    " Indent guides plugin
+Plugin 'vim-airline/vim-airline'            " Plugin for statusline configuration in vim
 
 " Language
 "---------
-" Plugin for GraphQL file detection, syntax highlighting, etc
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 Plugin 'jparise/vim-graphql'
 
-" Plugin for autocomplete engine
-Plugin 'Valloric/YouCompleteMe'
+" Files
+Plugin 'Valloric/YouCompleteMe'             " auto-suggestion/completion engine
 
-call vundle#end()            " required
+" Defaults
+Plugin 'tpope/vim-sensible'                 " set of sensible default configs for vim
 
+call vundle#end()
+
+"--------------------
+" Visual
+"--------------------
+colorscheme gruvbox         " current color-scheme
 "--------------------
 " Plugin options
 "--------------------
@@ -58,9 +67,11 @@ call vundle#end()            " required
 " see :h vundle for more details or wiki for FAQ
 
 " NERDTree
-let NERDTreeShowLineNumbers=1
-" enable NERDTree open on startup
-" autocmd VimEnter * NERDTree
+let NERDTreeShowLineNumbers=1   " Map CTRL + n to toggle NERDTree
+let NERDTreeShowBookmarks=1     " Open NERDTree bookmark by default
+:let g:NERDTreeWinSize=40       " Increase default width of nerdTree buffer
+nmap <C-n> :NERDTreeToggle<CR>
+"" autocmd VimEnter * NERDTree   " enable NERDTree open on startup
 
 " vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
@@ -71,31 +82,6 @@ let g:indent_guides_guide_size = 1
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-p> :FZF<CR>
 
-" Pathogen plugin manager
-execute pathogen#infect()
-filetype plugin indent on
-call pathogen#helptags()
-
-" Set backspace to delete
-set backspace=indent,eol,start
-
-" Set show line numbers
-set number
-
-" Map CTRL + n to toggle NERDTree
-nmap <C-n> :NERDTreeToggle<CR>
-
-" Open NERDTree bookmark by default
-let NERDTreeShowBookmarks=1
-
-" Increase default width of nerdTree buffer
-:let g:NERDTreeWinSize=40
-
-" Map CTRL + W to capslock
-" nmap <C-w> 
-
-" Map 'jj' to escape out of insert mode 
-inoremap jk <ESC>
 
 " Set tab and indents to 2 spaces
 filetype plugin indent on
