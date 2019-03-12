@@ -18,7 +18,7 @@ filetype plugin indent on                   " turn on indentation rules for spec
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
-" disable auto-comment on newline for all sessions
+" Disable auto-comment on newline for all sessions
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o 
 inoremap jk <ESC>
 
@@ -29,6 +29,12 @@ set guicursor=n-v-c:block-Cursor
 set guicursor+=i:ver100-iCursor
 set guicursor+=n-v-c:blinkon1
 set guicursor+=i:blinkwait10
+
+" Jump to last position upon opening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
 
 "--------------------
 " Check & install vim-plug
