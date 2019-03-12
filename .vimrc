@@ -68,6 +68,7 @@ Plug 'vim-airline/vim-airline-themes'       " themes for vim-airline
 Plug 'airblade/vim-gitgutter'               " shows a git diff in the gutter
 Plug 'flazz/vim-colorschemes'               " vim colorschemes
 Plug 'morhetz/gruvbox'                      " gruvbox theme
+Plug 'ryanoasis/vim-devicons'               " render dev-icons and glyphs when used with a patched NERD-font
 
 " Language
 "---------
@@ -85,8 +86,6 @@ Plug 'Valloric/YouCompleteMe'               " auto-suggestion/completion engine
 
 " Defaults
 Plug 'tpope/vim-sensible'                   " set of sensible default configs
-
-Plug 'ryanoasis/vim-devicons'               " render dev-icons and glyphs when used with a patched NERD-font
 
 call plug#end()                             " end plugin list
 
