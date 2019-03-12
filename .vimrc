@@ -10,17 +10,17 @@ set shiftwidth=2                            " set tab width to 2 spaces when ind
 set expandtab                               " on pressing tab, insert 2 spaces
 set encoding=UTF-8                          " set encoding to utf-8 for fonts/icons
 set guifont=FantasqueSansMono:h13           " set font for GUI (e.g. Macvim)
+inoremap jk <ESC>
 
 filetype on                                 " turn on filetype detection 
+filetype plugin on
 filetype plugin indent on                   " turn on indentation rules for specific filetypes
 
 " Omni completion
-filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
 " Disable auto-comment on newline for all sessions
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o 
-inoremap jk <ESC>
 
 " Configure cursor
 highlight Cursor guifg=white guibg=black
