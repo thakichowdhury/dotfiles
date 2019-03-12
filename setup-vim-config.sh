@@ -7,4 +7,9 @@ configureVimRC() {
   echo 'done!'
 }
 
+installFonts() {
+  cp -r Fonts ~/Library
+}
+
 configureVimRC
+installFonts

@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "configure-vimrc": "bash configure-vimrc.sh"
+    "setupVimConfig": "bash setup-vim-config.sh"
   },
   "repository": {
     "type": "git",
