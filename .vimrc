@@ -2,7 +2,7 @@
 " Core
 "--------------------
 syntax on                                   " syntax highlighting
-set nocompatible                            " be iMproved, required
+set nocompatible                            " be improved, required
 set backspace=indent,eol,start              " set backspace to delete
 set number                                  " set line numbers to show
 set tabstop=2                               " show existing tab with 2 spaces width
@@ -10,6 +10,9 @@ set shiftwidth=2                            " set tab width to 2 spaces when ind
 set expandtab                               " on pressing tab, insert 2 spaces
 set encoding=UTF-8                          " set encoding to utf-8 for fonts/icons
 set guifont=FantasqueSansMono:h13           " set font for GUI (e.g. Macvim)
+set spell                                   " set spell-check on
+set spelllang=en_us                         " set spell-check language to english
+set spellfile=spellfile.utf-8.add           " set file to add to spell-check list
 inoremap jk <ESC>
 
 filetype on                                 " turn on filetype detection 
