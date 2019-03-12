@@ -32,12 +32,7 @@ set guicursor+=i:blinkwait10
 "--------------------
 " Plugins
 "--------------------
-set rtp+=~/.vim/bundle/Vundle.vim
 call plug#begin('~/.vim/plugged')
-
-" Plug managers
-Plug 'VundleVim/Vundle.vim'
-" let Vundle manage Vundle, required
 
 " Git
 "---------
