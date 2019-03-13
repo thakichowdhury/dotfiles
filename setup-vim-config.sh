@@ -3,7 +3,7 @@
 configureVimRC() {
   mkdir backup
   mv ~/.vimrc ./backup/backup.vim
-  echo "source $PWD/.vimrc" > ~/.vimrc
+  echo "source $PWD/config.vim" > ~/.vimrc
   echo 'done!'
 }
 
