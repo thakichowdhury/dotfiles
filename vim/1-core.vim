@@ -14,7 +14,7 @@ set guifont=FantasqueSansMono:h13           " set font for GUI (e.g. Macvim)
 " set spelllang=en_us                         " set spell-check language to english
 " set spellfile=spellfile.utf-8.add           " set file to add to spell-check list
 
-inoremap jk <ESC>
+" inoremap jk <ESC>
 let mapleader = "\<Space>"
 nmap <leader>o o<Esc>
 
@@ -42,8 +42,11 @@ if has("autocmd")
     \| exe "normal! g'\"" | endif
 endif
 
-"--------------------
-" Visual
-"--------------------
-colorscheme gruvbox                         " current color-scheme
-"--------------------
+" yank to clipboard
+if has("clipboard")
+  set clipboard=unnamed " copy to the system clipboard
+
+  if has("unnamedplus") " X11 support
+    set clipboard+=unnamedplus
+  endif
+endif

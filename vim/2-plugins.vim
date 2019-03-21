@@ -42,6 +42,7 @@ Plug 'jparise/vim-graphql'                  " syntax highlighting for graphQL fi
 " Utility
 Plug 'w0rp/ale'                             " asynchronous linting/fixing
 Plug 'SirVer/ultisnips'                     " snippet manager
+Plug 'jkramer/vim-checkbox'                 " toggles checkboxes
 
 " Files
 Plug 'Valloric/YouCompleteMe'               " auto-suggestion/completion engine
@@ -81,8 +82,11 @@ let g:indent_guides_enable_on_vim_startup=1 " enable indent-guides on vim startu
 let g:indent_guides_auto_colors = 0         " disallow indent-guides to inherit colors from color-scheme
 let g:indent_guides_guide_size = 1          " set width of indent-guides
 
+" Colorschemes
+colorscheme gruvbox
+
 " Plug options
-"--------------------
+
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
