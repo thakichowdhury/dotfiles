@@ -49412,7 +49412,7 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Documents/dotfiles</string>
+	<string>~/Documents/dotfiles/iterm</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -49458,9 +49458,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>2008 1209 606 469 1680 1050 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>1722 1081 796 486 1680 0 1080 1897 </string>
+	<string>1722 1201 796 486 1680 0 1080 1897 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1680 0 1080 1897 1680 0 1080 1897 </string>
+	<string>0 79 1680 948 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -50219,7 +50219,7 @@ bb_mobile_run:Restore Window Arrangement</string>
 	<key>NoSyncInstallationId</key>
 	<string>9FA73B72-B197-4593-ADFB-F21B98574CBA</string>
 	<key>NoSyncLastTipTime</key>
-	<real>574189391.12582004</real>
+	<real>574559825.30596304</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -50279,6 +50279,10 @@ bb_mobile_run:Restore Window Arrangement</string>
 		<string>0045</string>
 		<string>0046</string>
 		<string>0047</string>
+		<string>0048</string>
+		<string>0049</string>
+		<string>0050</string>
+		<string>0051</string>
 	</array>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>0</integer>
@@ -50318,7 +50322,7 @@ bb_mobile_run:Restore Window Arrangement</string>
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/thakichowdhury/Documents/dotfiles</string>
+	<string>/Users/thakichowdhury/Documents/dotfiles/iterm</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
@@ -50330,7 +50334,7 @@ bb_mobile_run:Restore Window Arrangement</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-03-13T17:01:28Z</date>
+	<date>2019-03-18T15:41:42Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Secure Input</key>
