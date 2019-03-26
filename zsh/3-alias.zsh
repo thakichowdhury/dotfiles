@@ -2,9 +2,9 @@
 oh_my_zsh="~/.oh-my-zsh/"
 dotfiles="~/Documents/dotfiles"
 
-alias zc="vim $dotfiles/0-index.zsh"
-alias zcf="vim $dotfiles/2-functions.zsh"
-alias zca="vim $dotfiles/3-alias.zsh"
+alias zc="vim $dotfiles/zsh/0-index.zsh"
+alias zcf="vim $dotfiles/zsh/2-functions.zsh"
+alias zca="vim $dotfiles/zsh/3-alias.zsh"
 
 alias pj="vim package.json"
 alias pjl="vim package-lock.json"
