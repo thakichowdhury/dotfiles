@@ -38,11 +38,14 @@ Plug 'neoclide/vim-jsx-improve'             " improved syntax highlighting for j
 "" Plug 'pangloss/vim-javascript'           " commented out for conflicts with vim-jsx-improve
 "" Plug 'mxw/vim-jsx'                       " commented out for conflicts with vim-jsx-improve
 Plug 'jparise/vim-graphql'                  " syntax highlighting for graphQL filetypes
+Plug 'stephpy/vim-yaml'                     " simpler/cleaner syntax highlighting for yaml files
+Plug 'ekalinin/Dockerfile.vim'              " syntax highlighting for Docker files
 
 " Utility
 Plug 'w0rp/ale'                             " asynchronous linting/fixing
 Plug 'SirVer/ultisnips'                     " snippet manager
 Plug 'jkramer/vim-checkbox'                 " toggles checkboxes
+Plug 'tpope/vim-surround'                   " automates making, altering, and removing surrounding brackets
 
 " Files
 Plug 'Valloric/YouCompleteMe'               " auto-suggestion/completion engine
