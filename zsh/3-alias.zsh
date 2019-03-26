@@ -1,17 +1,16 @@
 # Example aliases
 oh_my_zsh="~/.oh-my-zsh/"
-oh_my_custom="$oh_my_zsh/custom"
+dotfiles="~/Documents/dotfiles"
 
-alias zc="vim ~/.zshrc"
-alias zcc="vim ~/.oh-my-zsh/custom"
-alias zca="vim $oh_my_custom/alias.zsh"
-alias zcf="vim $oh_my_custom/functions.zsh"
+alias zc="vim $dotfiles/0-index.zsh"
+alias zcf="vim $dotfiles/2-functions.zsh"
+alias zca="vim $dotfiles/3-alias.zsh"
 
 alias pj="vim package.json"
 alias pjl="vim package-lock.json"
 
 alias ls="tree -L 1"
-alias t2="tree -L 2"
+alias ls2="tree -L 2"
 
 # directories
 alias df="cd ~/Documents/dotfiles"
@@ -30,11 +29,14 @@ projects="~/Documents/projects"
 ## blackbird
 bbroot="~/Documents/blackbird/"
 storybook="$bbroot/_storybook"
+dashboard="~/Documents/dashboard"
 
 # directory alias
 alias pjs="cd $projects"
+alias pnl="cd ~/Google\ Drive/rl"
 
 alias bb="cd $bbroot"
+alias db="cd $dashboard"
 
 alias sb="cd $storybook"
 alias sbm="cd $storybook/storybook-mobile"
