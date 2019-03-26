@@ -16,7 +16,7 @@ setup_config_files() {
 }
 
 installFonts() {
-  cp -r Fonts ~/Library
+  cp -r ./media/Fonts ~/Library
 }
 
 setup_config_files './vim' ~/.vimrc
