@@ -20,4 +20,6 @@ installFonts() {
 }
 
 setup_config_files './vim' ~/.vimrc
+
 # installFonts
+installFonts
