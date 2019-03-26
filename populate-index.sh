@@ -9,10 +9,6 @@ declare -a directories=(
   "./zsh"
   )
 
-length () {
-  return "${1}"
-}
-
 # iterates through all the files in given directories
 # and sources them into an index file
 make_index () {
