@@ -18,6 +18,9 @@ set guifont=FantasqueSansMono:h13           " set font for GUI (e.g. Macvim)
 let mapleader = "\<Space>"
 nmap <leader>o o<Esc>
 nmap <leader>r :resize<CR>
+nmap <leader>j :bN<CR>
+nmap <leader>l :bn<CR>
+nmap <leader>k :bd<CR>
 
 filetype on                                 " turn on filetype detection 
 filetype plugin on
