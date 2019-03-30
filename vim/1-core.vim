@@ -17,6 +17,7 @@ set guifont=FantasqueSansMono:h13           " set font for GUI (e.g. Macvim)
 " inoremap jk <ESC>
 let mapleader = "\<Space>"
 nmap <leader>o o<Esc>
+nmap <leader>r :resize<CR>
 
 filetype on                                 " turn on filetype detection 
 filetype plugin on
@@ -29,12 +30,12 @@ set omnifunc=syntaxcomplete#Complete
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o 
 
 " Configure cursor
-highlight Cursor guifg=white guibg=black
-highlight iCursor guifg=white guibg=steelblue
-set guicursor=n-v-c:block-Cursor
-set guicursor+=i:ver100-iCursor
-set guicursor+=n-v-c:blinkon1
-set guicursor+=i:blinkwait10
+" highlight Cursor guifg=white guibg=black
+" highlight iCursor guifg=white guibg=steelblue
+" set guicursor=n-v-c:block-Cursor
+" set guicursor+=i:ver100-iCursor
+" set guicursor+=n-v-c:blinkon1
+" set guicursor+=i:blinkwait10
 
 " Jump to last position upon opening a file
 if has("autocmd")
