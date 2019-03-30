@@ -11,7 +11,7 @@ setup_config_files() {
   backup_dir="backup/$date_and_time"
   mkdir -p $backup_dir
   cp "$2" "./$backup_dir/backup.$extension"
-  echo "source $PWD/$1/0-index.$extension" > $2
+  echo "source $PWD/$1/0-index.ignore.$extension" > $2
   echo 'done!'
 }
 

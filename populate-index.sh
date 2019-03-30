@@ -22,7 +22,7 @@ make_index () {
       file=$(echo $f | cut -c 3-)
       file_absolute_path="$PWD/$file"
       extension=$(echo $1 | cut -c 3-)
-      index_file="$1/0-index.$extension"
+      index_file="$1/0-index.ignore.$extension"
       echo "sourcing from $file_absolute_path"
       echo source $file_absolute_path >> $index_file
     fi
