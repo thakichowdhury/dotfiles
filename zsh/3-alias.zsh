@@ -33,7 +33,12 @@ dashboard="~/Documents/dashboard"
 
 # directory alias
 alias pjs="cd $projects"
+alias personal="~/Google\ Drive/rl"
 alias pnl="cd ~/Google\ Drive/rl"
+
+## personal
+alias goals="vim ~/Google\ Drive/rl/goals.md"
+alias reflections="vim ~/Google\ Drive/rl/reflections.md"
 
 alias bb="cd $bbroot"
 alias db="cd $dashboard"
