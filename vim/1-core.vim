@@ -13,6 +13,10 @@ set guifont=FantasqueSansMono:h13           " set font for GUI (e.g. Macvim)
 " set spell                                   " set spell-check on
 " set spelllang=en_us                         " set spell-check language to english
 " set spellfile=spellfile.utf-8.add           " set file to add to spell-check list
+set foldmethod=indent   
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
 
 " inoremap jk <ESC>
 let mapleader = "\<Space>"
