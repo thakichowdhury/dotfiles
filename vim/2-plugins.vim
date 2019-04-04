@@ -49,6 +49,7 @@ Plug 'tpope/vim-surround'                   " automates making, altering, and re
 
 " Files
 Plug 'Valloric/YouCompleteMe'               " auto-suggestion/completion engine
+Plug 'mhinz/vim-grepper'                    " utility to help integrate different grep tools
 
 " Defaults
 Plug 'tpope/vim-sensible'                   " set of sensible default configs
@@ -69,11 +70,14 @@ nmap <leader>f :NERDTreeFind<CR>
 
 " Merginal
 let g:merginal_windowWidth = 100            " set Merginal side window width
-nmap <C-m> :MerginalToggle<CR>
+nmap <leader>m :MerginalToggle<CR>
 
 " FZF
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-p> :FZF<CR>
+
+" Grepper
+nnoremap <leader>g :Grepper -tool rg<cr>
 
 " Airline
 let g:airline_theme = 'gruvbox'             " set airline statusbar color-scheme
