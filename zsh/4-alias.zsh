@@ -64,6 +64,7 @@ alias gp="git push"
 alias gpl="git pull"
 alias gpl="git pull"
 alias gts="git stash"
+alias gtsd="$gts && $gts drop"
 alias gtsd="git stash && git stash drop"
 alias hist="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
 
