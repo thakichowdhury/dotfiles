@@ -19,12 +19,11 @@ crb() {
 clean_directory() {
   echo "removing node modules...\n"
   rm -rf node_modules
-  echo "checking for lock files\n"
   if [ -f ./package-lock.json ]; then
-    echo "  removing package-lock.json...\n"
+    echo "removing package-lock.json...\n"
     rm package-lock.json
   elif [ -f ./yarn.lock ]; then
-    echo "  removing yarn.lock...\n"
+    echo "removing yarn.lock...\n"
     rm yarn.lock
   fi
   echo "installing node modules...\n"
