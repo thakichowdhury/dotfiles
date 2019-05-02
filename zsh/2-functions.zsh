@@ -19,13 +19,19 @@ crb() {
 clean_directory() {
   echo "removing node modules...\n"
   rm -rf node_modules
+
   if [ -f ./package-lock.json ]; then
+    package_manager="npm"
+
     echo "removing package-lock.json...\n"
     rm package-lock.json
   elif [ -f ./yarn.lock ]; then
+    package_manager="yarn"
+
     echo "removing yarn.lock...\n"
     rm yarn.lock
   fi
-  echo "installing node modules...\n"
-  npm install
+  echo "installing node modules using $package_manager...\n"
+
+  eval "$package_manager install"
 }
