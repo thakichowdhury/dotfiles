@@ -17,6 +17,7 @@ set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=2
+set hidden
 
 " inoremap jk <ESC>
 let mapleader = "\<Space>"
@@ -25,6 +26,7 @@ nmap <leader>r :resize<CR>
 nmap <leader>j :bN<CR>
 nmap <leader>l :bn<CR>
 nmap <leader>k :bd<CR>
+nmap gd gdzzviw
 
 filetype on                                 " turn on filetype detection 
 filetype plugin on
