@@ -51,6 +51,7 @@ alias shd="cd $bbroot/_shared"
 alias mbl="cd $bbroot/mobile"
 alias web="cd $bbroot/web"
 alias adm="cd $bbroot/admin"
+alias wrk="cd $bbroot/worker"
 
 # git alias
 alias gbr="git branch"
@@ -64,8 +65,7 @@ alias gp="git push"
 alias gpl="git pull"
 alias gpl="git pull"
 alias gts="git stash"
-alias gtsd="$gts && $gts drop"
-alias gtsd="git stash && git stash drop"
+alias gtsd="git add . && git stash && git stash drop"
 alias hist="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
 
 # npm alias
