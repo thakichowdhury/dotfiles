@@ -26,13 +26,6 @@ alias tmux="tmux -2"
 ## personal
 projects="~/Documents/projects"
 
-## blackbird
-bbroot="~/Documents/blackbird/"
-bb_backup="~/Documents/blackbird_backup"
-
-storybook="$bbroot/_storybook"
-dashboard="~/Documents/dashboard"
-
 # directory alias
 alias pjs="cd $projects"
 alias personal="~/Google\ Drive/rl"
@@ -43,8 +36,10 @@ alias goals="vim ~/Google\ Drive/rl/goals.md"
 alias reflections="vim ~/Google\ Drive/rl/reflections.md"
 
 # blackbird
+bbroot="~/Documents/blackbird/"
+storybook="$bbroot/_storybook"
+
 alias bb="cd $bbroot"
-alias db="cd $dashboard"
 
 alias sb="cd $storybook"
 alias sbm="cd $storybook/storybook-mobile"
@@ -55,6 +50,22 @@ alias mbl="cd $bbroot/mobile"
 alias web="cd $bbroot/web"
 alias adm="cd $bbroot/admin"
 alias wrk="cd $bbroot/worker"
+
+# blackbird_backup
+bb_backup="~/Documents/blackbird_backup"
+b_storybook="$bb_backup/_storybook"
+
+alias b_bb="cd $bb_backup"
+
+alias b_sb="cd $storybook"
+alias b_sbm="cd $storybook/storybook-mobile"
+alias b_sbw="cd $storybook/storybook-web"
+
+alias b_shd="cd $bb_backup/_shared"
+alias b_mbl="cd $bb_backup/mobile"
+alias b_web="cd $bb_backup/web"
+alias b_adm="cd $bb_backup/admin"
+alias b_wrk="cd $bb_backup/worker"
 
 # git alias
 alias gbr="git branch"
