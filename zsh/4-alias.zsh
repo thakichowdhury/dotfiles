@@ -28,6 +28,8 @@ projects="~/Documents/projects"
 
 ## blackbird
 bbroot="~/Documents/blackbird/"
+bb_backup="~/Documents/blackbird_backup"
+
 storybook="$bbroot/_storybook"
 dashboard="~/Documents/dashboard"
 
@@ -40,6 +42,7 @@ alias pnl="cd ~/Google\ Drive/rl"
 alias goals="vim ~/Google\ Drive/rl/goals.md"
 alias reflections="vim ~/Google\ Drive/rl/reflections.md"
 
+# blackbird
 alias bb="cd $bbroot"
 alias db="cd $dashboard"
 
