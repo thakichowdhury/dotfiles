@@ -35,3 +35,10 @@ clean_directory() {
 
   eval "$package_manager install"
 }
+
+git_blame() {
+  file_path=$1
+  line=$2
+  full_git_blame="git blame --porcelain -L $line $file_path"
+  echo $full_git_blame
+}
