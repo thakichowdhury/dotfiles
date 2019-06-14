@@ -61,6 +61,9 @@ call plug#end()                             " end plugin list
 " Plugin config
 "--------------------
 
+" vim-javascript
+let g:javascript_plugin_jsdoc = 1
+
 " NERDTree
 let NERDTreeShowLineNumbers=1               " Map CTRL + n to toggle NERDTree
 let NERDTreeShowBookmarks=1                 " Open NERDTree bookmark by default
