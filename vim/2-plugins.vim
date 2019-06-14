@@ -46,6 +46,7 @@ Plug 'w0rp/ale'                             " asynchronous linting/fixing
 Plug 'SirVer/ultisnips'                     " snippet manager
 Plug 'jkramer/vim-checkbox'                 " toggles checkboxes
 Plug 'tpope/vim-surround'                   " automates making, altering, and removing surrounding brackets
+Plug 'heavenshell/vim-jsdoc'                " streamlines the making of jsdoc comments
 
 " Files
 Plug 'Valloric/YouCompleteMe'               " auto-suggestion/completion engine
@@ -88,6 +89,9 @@ let g:airline#extensions#tabline#enabled=1  " enable top buffer/tab bar to be se
 let g:indent_guides_enable_on_vim_startup=1 " enable indent-guides on vim startup
 let g:indent_guides_auto_colors = 0         " disallow indent-guides to inherit colors from color-scheme
 let g:indent_guides_guide_size = 1          " set width of indent-guides
+
+" jsdoc.vim
+let g:jsdoc_enable_es6=1
 
 " Colorschemes
 colorscheme gruvbox
