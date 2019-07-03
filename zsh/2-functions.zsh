@@ -1,10 +1,11 @@
 # formatting
-format_branch_name() {
+create_branch_from_jira() {
   ticket_name=${1//' '/'-'}
-  formatted_branch=$2'/'$ticket_name:l
+  formatted_branch="$2'/'$ticket_name:l"
   echo $formatted_branch
   echo $formatted_branch | pbcopy
-  git branch -b $formatted_branch
+  # git branch $formatted_branch
+  eval "git checkout -b $formatted_branch"
 }
 
 # git
@@ -16,6 +17,7 @@ crb() {
 }
 
 ## remove node modules, npm and yarn lock files, and reinstalls
+## create conditional to keep lock files if given argument
 clean_directory() {
   echo "removing node modules...\n"
   rm -rf node_modules
@@ -35,6 +37,16 @@ clean_directory() {
 
   eval "$package_manager install"
 }
+
+# install_dependencies() {
+#   echo "checking for node_modules...\n"
+  
+#   if [ -f node_modules ]; then
+#     break;
+#   fi
+
+#   eval "
+# }
 
 git_blame() {
   file_path=$1
