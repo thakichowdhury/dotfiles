@@ -20,6 +20,7 @@ Plug 'idanarye/vim-merginal'                " extended, friendlier user interfac
 " Navigation
 Plug 'scrooloose/nerdtree'                  " tree file manager for vim
 Plug 'Xuyuanp/nerdtree-git-plugin'          " shows git status of files within NERDTree
+Plug 'justinmk/vim-sneak'                   " improved cursor movement using find-like movement
 
 " Visual
 "---------
@@ -31,6 +32,7 @@ Plug 'airblade/vim-gitgutter'               " shows a git diff in the gutter
 Plug 'flazz/vim-colorschemes'               " vim colorschemes
 Plug 'morhetz/gruvbox'                      " gruvbox theme
 Plug 'ryanoasis/vim-devicons'               " render dev-icons and glyphs when used with a patched NERD-font
+Plug 'mhinz/vim-startify'                   " a fancy start screen for vim/neovim
 
 " Language
 "---------
@@ -98,6 +100,13 @@ let g:jsdoc_enable_es6=1
 
 " Colorschemes
 colorscheme gruvbox
+
+" Vim-sneak
+let g:sneak#label = 1
+map f <Plug>Sneak_f
+map F <Plug>Sneak_F
+map t <Plug>Sneak_t
+map T <Plug>Sneak_T
 
 " Plug options
 
