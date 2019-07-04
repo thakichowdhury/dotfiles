@@ -9,6 +9,9 @@ set tabstop=2                               " show existing tab with 2 spaces wi
 set shiftwidth=2                            " set tab width to 2 spaces when indenting with '>'
 set expandtab                               " on pressing tab, insert 2 spaces
 set encoding=UTF-8                          " set encoding to utf-8 for fonts/icons
+let &t_8f="\<Esc>[38;2;%lu;%lu;%lum" " enable italcs
+let &t_8b="\<Esc>[48;2;%lu;%lu;%lum" " enable italics
+set termguicolors
 set guifont=FantasqueSansMono:h13           " set font for GUI (e.g. Macvim)
 " set spell                                   " set spell-check on
 " set spelllang=en_us                         " set spell-check language to english
@@ -18,6 +21,10 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 set hidden
+set ic                                      " ignore upper/lower case when searching
+set is                                      " show partial matches for a search phrase
+set hls                                     " highlight all matching phrases
+
 
 " inoremap jk <ESC>
 let mapleader = "\<Space>"
