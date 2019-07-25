@@ -33,7 +33,7 @@ nmap <leader>r :resize<CR>
 nmap <leader>j :bN<CR>
 nmap <leader>l :bn<CR>
 nmap <leader>k :bd<CR>
-nmap gd gdzzviw
+" nmap gd gdzzviw
 
 filetype on                                 " turn on filetype detection 
 filetype plugin on
