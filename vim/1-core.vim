@@ -25,6 +25,11 @@ set ic                                      " ignore upper/lower case when searc
 set is                                      " show partial matches for a search phrase
 set hls                                     " highlight all matching phrases
 
+" Split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " inoremap jk <ESC>
 let mapleader = "\<Space>"
