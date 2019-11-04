@@ -33,6 +33,7 @@ Plug 'flazz/vim-colorschemes'               " vim colorschemes
 Plug 'morhetz/gruvbox'                      " gruvbox theme
 Plug 'ryanoasis/vim-devicons'               " render dev-icons and glyphs when used with a patched NERD-font
 Plug 'mhinz/vim-startify'                   " a fancy start screen for vim/neovim
+Plug 'kshenoy/vim-signature'                " toggle, display and navigate marks
 
 " Language
 "---------
@@ -62,6 +63,10 @@ call plug#end()                             " end plugin list
 "--------------------
 " Plugin config
 "--------------------
+
+" YouCompleteMe
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 " vim-javascript
 let g:javascript_plugin_jsdoc = 1
