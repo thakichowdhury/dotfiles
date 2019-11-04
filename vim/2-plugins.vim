@@ -37,9 +37,10 @@ Plug 'kshenoy/vim-signature'                " toggle, display and navigate marks
 
 " Language
 "---------
-Plug 'neoclide/vim-jsx-improve'             " improved syntax highlighting for javascript and jsx
-"" Plug 'pangloss/vim-javascript'           " commented out for conflicts with vim-jsx-improve
-"" Plug 'mxw/vim-jsx'                       " commented out for conflicts with vim-jsx-improve
+" Plug 'neoclide/vim-jsx-improve'             " improved syntax highlighting for javascript and jsx
+" Plug 'mxw/vim-jsx'                          " commented out for conflicts with vim-jsx-improve
+Plug 'pangloss/vim-javascript'              " javascript indentation and syntax support
+Plug 'MaxMEllon/vim-jsx-pretty'             " jsx syntax highlighting
 Plug 'jparise/vim-graphql'                  " syntax highlighting for graphQL filetypes
 Plug 'stephpy/vim-yaml'                     " simpler/cleaner syntax highlighting for yaml files
 Plug 'ekalinin/Dockerfile.vim'              " syntax highlighting for Docker files
