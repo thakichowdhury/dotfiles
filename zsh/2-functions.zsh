@@ -1,11 +1,17 @@
 # formatting
 create_branch_from_jira() {
+  # $1 = ticket name, e.g. Attempt to book again after delay
+  # $2 = ticketNumber, e.g. pe-1242
+
+  # replace spaces with dashes
   ticket_name=${1//' '/'-'}
   echo "TICKETNAME: $ticket_name"
+
+  # append ticket name to ticket number, seperated with a dash
   formatted_branch="$2/$ticket_name:l"
   echo $formatted_branch
-  echo $formatted_branch | pbcopy
-  # git branch $formatted_branch
+
+  # create and checkout new branch
   eval "git checkout -b $formatted_branch"
 }
 
@@ -37,21 +43,4 @@ clean_directory() {
   echo "installing node modules using $package_manager...\n"
 
   eval "$package_manager install"
-}
-
-# install_dependencies() {
-#   echo "checking for node_modules...\n"
-  
-#   if [ -f node_modules ]; then
-#     break;
-#   fi
-
-#   eval "
-# }
-
-git_blame() {
-  file_path=$1
-  line=$2
-  full_git_blame="git blame --porcelain -L $line $file_path"
-  echo $full_git_blame
 }
