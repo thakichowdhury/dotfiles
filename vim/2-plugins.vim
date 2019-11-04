@@ -44,6 +44,7 @@ Plug 'MaxMEllon/vim-jsx-pretty'             " jsx syntax highlighting
 Plug 'jparise/vim-graphql'                  " syntax highlighting for graphQL filetypes
 Plug 'stephpy/vim-yaml'                     " simpler/cleaner syntax highlighting for yaml files
 Plug 'ekalinin/Dockerfile.vim'              " syntax highlighting for Docker files
+Plug 'suy/vim-context-commentstring'        " sets the value of ‘commentstring’ to a different value depending on the region of the file
 
 " Utility
 Plug 'w0rp/ale'                             " asynchronous linting/fixing
