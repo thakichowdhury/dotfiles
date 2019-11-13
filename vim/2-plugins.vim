@@ -106,6 +106,11 @@ let g:indent_guides_guide_size = 1          " set width of indent-guides
 let g:jsdoc_enable_es6=1
 
 " Colorschemes
+let &t_ZH="\e[3m"                           " this and the next line allows for italics when using iTerm
+let &t_ZR="\e[23m"
+
+let g:gruvbox_italic = '1'
+
 colorscheme gruvbox
 
 " Vim-sneak
