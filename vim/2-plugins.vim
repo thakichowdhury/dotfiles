@@ -110,6 +110,7 @@ let &t_ZH="\e[3m"                           " this and the next line allows for 
 let &t_ZR="\e[23m"
 
 let g:gruvbox_italic = '1'
+let g:gruvbox_contrast_dark = 'hard'
 
 colorscheme gruvbox
 
