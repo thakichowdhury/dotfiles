@@ -1,4 +1,4 @@
-function check_and_install_plugin_manager()
+function Check_and_install_plugin_manager()
   if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
       \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
