@@ -32,5 +32,6 @@ installFonts() {
 }
 
 setup_config_files './vim'
+setup_config_files './zsh'
 
 installFonts
