@@ -30,6 +30,7 @@ projects="~/Documents/projects"
 alias pjs="cd $projects"
 alias personal="~/Google\ Drive/rl"
 alias pnl="cd ~/Google\ Drive/rl"
+alias learning="cd ~/Documents/learning"
 
 ## personal
 alias goals="vim ~/Google\ Drive/rl/goals.md"
