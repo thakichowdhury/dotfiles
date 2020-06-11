@@ -53,3 +53,6 @@ alias hist="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
 # npm alias
 alias nr="npm run"
 alias ni="npm install"
+
+# python
+alias python=/usr/local/bin/python3
