@@ -1,3 +1,3 @@
 #!/bin/bash
 
-~/.vim/plugged/YouCompleteMe/install.py --ts-completer
+python3 ~/.vim/plugged/YouCompleteMe/install.py --ts-completer
