@@ -8,6 +8,7 @@ alias zca="vim $dotfiles/zsh/3-alias.zsh"
 
 alias pj="vim package.json"
 alias pjl="vim package-lock.json"
+alias pf="vim Pipfile"
 
 alias ls="tree -L 1"
 alias ls2="tree -L 2"
@@ -43,6 +44,7 @@ alias gbm="git checkout -b"
 alias gs="git status"
 alias gd="git diff"
 alias ga="git add"
+alias gr="git reset"
 alias gc="git commit"
 alias gp="git push"
 alias gpl="git pull"
@@ -56,3 +58,4 @@ alias ni="npm install"
 
 # python
 alias python=/usr/local/bin/python3
+alias pi="pipenv install"
