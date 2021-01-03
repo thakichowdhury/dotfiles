@@ -23,6 +23,15 @@ crb() {
   git fetch && git checkout $1
 }
 
+# create and move into new directory
+mkd() {
+    echo "Making directory $1"
+    mkdir $1
+
+    echo "Changing to directory $1"
+    cd $1
+}
+
 ## remove node modules, npm and yarn lock files, and reinstalls
 ## create conditional to keep lock files if given argument
 clean_directory() {
