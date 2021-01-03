@@ -13,9 +13,6 @@ alias pf="vim Pipfile"
 alias ls="tree -L 1"
 alias ls2="tree -L 2"
 
-# directories
-alias df="cd ~/Documents/dotfiles"
-
 ## vim
 vimdir="~/.vim"
 alias vdir="cd $vimdir"
@@ -26,16 +23,19 @@ alias tmux="tmux -2"
 
 ## personal
 projects="~/Documents/projects"
+google_drive="~/Google\ Drive"
 
-# directory alias
-alias pjs="cd $projects"
-alias personal="~/Google\ Drive/rl"
-alias pnl="cd ~/Google\ Drive/rl"
+# directories
+alias df="cd ~/Documents/dotfiles"
+alias pjs="cd $projects/personal/active"
 alias learning="cd ~/Documents/learning"
 
 ## personal
-alias goals="vim ~/Google\ Drive/rl/goals.md"
-alias reflections="vim ~/Google\ Drive/rl/reflections.md"
+alias goals="vim $google_drive/rl/goals.md"
+alias reflections="vim $google_drive/rl/reflections.md"
+
+## career
+alias blast="cd $google_drive/blast-parent"
 
 # git alias
 alias gbr="git branch"
