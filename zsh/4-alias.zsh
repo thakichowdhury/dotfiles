@@ -35,7 +35,7 @@ alias goals="vim $google_drive/rl/goals.md"
 alias reflections="vim $google_drive/rl/reflections.md"
 
 ## career
-alias blast="cd $google_drive/blast-parent"
+alias consulting="cd $google_drive/consulting"
 
 # git alias
 alias gbr="git branch"
