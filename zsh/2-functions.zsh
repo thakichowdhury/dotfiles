@@ -1,18 +1,42 @@
-# formatting
-create_branch_from_jira() {
-  # $1 = ticket name, e.g. Attempt to book again after delay
-  # $2 = ticketNumber, e.g. pe-1242
+jira-create-branch() {
+    echo "Enter issue type number"
+    echo "(1) feature\n(2) bug\n(3) hotfix"
+    read issue_type
 
-  # replace spaces with dashes
-  ticket_name=${1//' '/'-'}
-  echo "TICKETNAME: $ticket_name"
+    # assign issue_type based on user input
+    if [[ $issue_type == "1" ]] then
+        issue_type="feature"
+    elif [[ $issue_type == "2" ]] then
+        issue_type="bug"
+    elif [[ $issue_type == "3" ]] then
+        issue_type="hotfix"
+    else
+        echo "Error: $issue_type is not an acceptable answer"
+        exit 1
+    fi
 
-  # append ticket name to ticket number, seperated with a dash
-  formatted_branch="$2/$ticket_name:l"
-  echo $formatted_branch
+    echo "\n"
 
-  # create and checkout new branch
-  eval "git checkout -b $formatted_branch"
+    echo "Enter ticket key"
+    read ticket_key
+    # replace all lower-case chars with uppercase
+    ticket_key=$(echo $ticket_key | tr '[a-z]' '[A-Z]')
+
+    echo "\n"
+
+    echo "Enter ticket name"
+    read ticket_name
+    # replace all non-alphanumeric characters in ticket_name with a - char
+    ticket_name="${ticket_name//[^[:alnum:]]/-}"
+
+    echo "\n"
+
+    # assign a branch name from the formatted ticket info
+    branch_name="$issue_type/$ticket_key/$ticket_name"
+
+    # create and checkout new git branch
+    echo "Checking out branch $branch_name"
+    eval "git checkout -b $branch_name"
 }
 
 # git
