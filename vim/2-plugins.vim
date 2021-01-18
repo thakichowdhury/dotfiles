@@ -90,7 +90,7 @@ set rtp+=/usr/local/opt/fzf
 nnoremap <C-p> :FZF<CR>
 
 " Grepper
-nnoremap <leader>g :Grepper -tool rg<cr>
+nnoremap <leader>g :Grepper<cr>
 
 " Airline
 let g:airline_theme = 'gruvbox'             " set airline statusbar color-scheme
