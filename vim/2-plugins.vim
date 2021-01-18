@@ -73,8 +73,8 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 
 " delimitMate
 " DelimitMateTest to see current config
-let b:delimitMate_expand_cr = 2
-let b:delimitMate_expand_space = 1
+let g:delimitMate_expand_cr = 2
+let g:delimitMate_expand_space = 1
 
 " vim-javascript
 let g:javascript_plugin_jsdoc = 1
