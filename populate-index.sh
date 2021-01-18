@@ -35,10 +35,3 @@ do
   make_index $d
 done
 
-# number_of_directories=${#directories[@]}
-# for (( i=0; i<${number_of_directories}; i++ ));
-# do
-#   dir=${directories[$i]}
-#   echo "creating index file at $dir"
-#   make_index $dir
-# done
