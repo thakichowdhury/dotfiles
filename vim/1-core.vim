@@ -7,9 +7,9 @@ set backspace=indent,eol,start              " set backspace to delete
 set number                                  " set line numbers to show
 
 " indentation
-set tabstop=8                               " how many columns of whitespace a \t is worth
-set softtabstop=4                           " how many columns of whitespace a tab keypress or a backspace keypress is worth
-set shiftwidth=4                            " how many columns of whitespace a “level of indentation” is worth
+set tabstop=4                               " how many columns of whitespace a \t is worth
+set softtabstop=2                           " how many columns of whitespace a tab keypress or a backspace keypress is worth
+set shiftwidth=2                            " how many columns of whitespace a “level of indentation” is worth
 set expandtab                               " insert space characters whenever the tab key is pressed
 
 set encoding=UTF-8                          " set encoding to utf-8 for fonts/icons
