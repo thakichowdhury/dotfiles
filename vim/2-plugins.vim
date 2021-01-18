@@ -52,6 +52,7 @@ Plug 'SirVer/ultisnips'                     " snippet manager
 Plug 'jkramer/vim-checkbox'                 " toggles checkboxes
 Plug 'tpope/vim-surround'                   " automates making, altering, and removing surrounding brackets
 Plug 'heavenshell/vim-jsdoc'                " streamlines the making of jsdoc comments
+Plug 'Raimondi/delimitMate'                 " provides insert mode auto-completion for quotes, parens, brackets, etc.
 
 " Files
 Plug 'Valloric/YouCompleteMe'               " auto-suggestion/completion engine
