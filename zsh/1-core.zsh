@@ -9,7 +9,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 # sensitive completion must be off. _ and - will be interchangeable.
- HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 
 export DEFAULT_USER="$(whoami)"
