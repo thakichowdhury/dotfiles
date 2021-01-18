@@ -56,6 +56,10 @@ alias hist="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
 alias nr="npm run"
 alias ni="npm install"
 
+# yarn alias
+alias yr="yarn run"
+alias yi"yarn install"
+
 # python
-alias python=/usr/local/bin/python3
+# alias python=/usr/local/bin/python3
 alias pi="pipenv install"
