@@ -42,5 +42,5 @@ for directory in "${directories[@]}"; do
   setup_config_files $directory
 done
 
-
 installFonts
+
