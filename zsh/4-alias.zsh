@@ -58,7 +58,7 @@ alias ni="npm install"
 
 # yarn alias
 alias yr="yarn run"
-alias yi"yarn install"
+alias yi="yarn install"
 
 # python
 # alias python=/usr/local/bin/python3
