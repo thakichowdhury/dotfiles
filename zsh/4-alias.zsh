@@ -35,7 +35,9 @@ alias goals="vim $google_drive/rl/goals.md"
 alias reflections="vim $google_drive/rl/reflections.md"
 
 ## career
-alias blast="cd ~/Documents/projects/consulting/blast-mobile"
+consulting="~/Documents/projects/consulting"
+alias bmob="cd $consulting/blast-mobile"
+alias bweb="cd $consulting/blast-web"
 
 # git alias
 alias gbr="git branch"
@@ -58,7 +60,7 @@ alias ni="npm install"
 
 # yarn alias
 alias yr="yarn run"
-alias yi="yarn install"
+alias ya="yarn add"
 
 # python
 # alias python=/usr/local/bin/python3
