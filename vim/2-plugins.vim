@@ -56,7 +56,9 @@ Plug 'Raimondi/delimitMate'                 " provides insert mode auto-completi
 
 " Files
 Plug 'Valloric/YouCompleteMe'               " auto-suggestion/completion engine
-Plug 'mhinz/vim-grepper'                    " utility to help integrate different grep tools
+" Plug 'mhinz/vim-grepper'                    " utility to help integrate different grep tools // commented out in favor of using ripgrep through FZF
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'                     " vim configurations for FZF
 
 " Defaults
 Plug 'tpope/vim-sensible'                   " set of sensible default configs
@@ -92,11 +94,8 @@ let g:merginal_windowWidth = 100            " set Merginal side window width
 nmap <leader>m :MerginalToggle<CR>
 
 " FZF
-set rtp+=/usr/local/opt/fzf
-nnoremap <C-p> :FZF<CR>
-
-" Grepper
-nnoremap <leader>g :Grepper<cr>
+nnoremap <leader>f :Files<CR>
+nnoremap <leader>g :Rg<cr>
 
 " Airline
 let g:airline_theme = 'gruvbox'             " set airline statusbar color-scheme
