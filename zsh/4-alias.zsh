@@ -35,7 +35,7 @@ alias goals="vim $google_drive/rl/goals.md"
 alias reflections="vim $google_drive/rl/reflections.md"
 
 ## career
-consulting="~/Documents/projects/consulting"
+consulting="~/Documents/consulting"
 alias bmob="cd $consulting/blast-mobile"
 alias bweb="cd $consulting/blast-web"
 
