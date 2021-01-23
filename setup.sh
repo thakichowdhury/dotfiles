@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # replace system config files with those in the dotfiles directory
 setup_config_files() {
