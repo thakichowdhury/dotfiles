@@ -85,10 +85,13 @@ let g:javascript_plugin_jsdoc = 1
 let NERDTreeShowLineNumbers=1               " Map CTRL + n to toggle NERDTree
 let NERDTreeShowBookmarks=1                 " Open NERDTree bookmark by default
 let g:NERDTreeWinSize=60                    " Increase default width of nerdTree buffer
+let NERDTreeIgnore=['\~$', '\.swp$', '\.swo$', '\.DS$']
+
 nmap <C-n> :NERDTreeToggle<CR>
 "" autocmd VimEnter * NERDTree              " enable NERDTree open on startup
 " open NERDTree panel to the local of the file in the current buffer
 nmap <leader>F :NERDTreeFind<CR>
+
 " Merginal
 let g:merginal_windowWidth = 100            " set Merginal side window width
 nmap <leader>m :MerginalToggle<CR>
