@@ -25,7 +25,8 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 set hidden
-set ic                                      " ignore upper/lower case when searching
+set ignorecase                              " ignore upper/lower case when searching
+set smartcase                               " allow case-sensitive search only if the search pattern has an uppercase char, e.g. /The vs /the
 set is                                      " show partial matches for a search phrase
 set hls                                     " highlight all matching phrases
 
