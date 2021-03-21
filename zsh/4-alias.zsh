@@ -26,7 +26,8 @@ projects="~/Documents/projects"
 google_drive="~/Google\ Drive"
 
 # directories
-alias df="cd ~/Documents/dotfiles"
+alias notes="cd $google_drive/notes && vim"
+alias df="cd ~/Documents/dotfiles && vim"
 alias pjs="cd $projects/personal/active"
 alias learning="cd ~/Documents/learning"
 
@@ -36,8 +37,12 @@ alias reflections="vim $google_drive/rl/reflections.md"
 
 ## career
 consulting="~/Documents/consulting"
-alias bmob="cd $consulting/blast-mobile"
-alias bweb="cd $consulting/blast-web"
+blast_app="$consulting/blast-app"
+alias bapp="cd $blast_app"
+alias bmob="cd $blast_app/packages/mobile"
+alias bweb="cd $blast_app/packages/web"
+alias bcom="cd $blast_app/packages/components"
+alias bserv="cd $blast_app/packages/server"
 
 # git alias
 alias gbr="git branch"
@@ -60,7 +65,9 @@ alias ni="npm install"
 
 # yarn alias
 alias yr="yarn run"
-alias ya="yarn add"
+alias ya="yarn add --exact"
+alias yad="yarn add --exact --dev"
+alias ybs="yarn run build && yarn run start"
 
 # python
 # alias python=/usr/local/bin/python3

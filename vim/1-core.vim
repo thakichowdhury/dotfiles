@@ -43,6 +43,7 @@ nmap <leader>r :resize<CR>
 nmap <leader>j :bN<CR>
 nmap <leader>l :bn<CR>
 nmap <leader>k :bd<CR>
+nnoremap <leader>q :q<CR>
 " nmap gd gdzzviw
 
 " filetype detection
@@ -55,6 +56,10 @@ set omnifunc=syntaxcomplete#Complete
 
 " Disable auto-comment on newline for all sessions
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o 
+
+
+" text highlighting
+nnoremap <leader>/ :nohl<CR>
 
 " Configure cursor
 " highlight Cursor guifg=white guibg=black

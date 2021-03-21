@@ -11,7 +11,7 @@ source $ZSH/oh-my-zsh.sh
 # sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
 
-
+# removes the hostname at the beginning of the terminal line
 export DEFAULT_USER="$(whoami)"
 
 # fd --type f | fzf                                   # Feed the output of fd into fzf

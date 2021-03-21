@@ -45,6 +45,7 @@ Plug 'jparise/vim-graphql'                  " syntax highlighting for graphQL fi
 Plug 'stephpy/vim-yaml'                     " simpler/cleaner syntax highlighting for yaml files
 Plug 'ekalinin/Dockerfile.vim'              " syntax highlighting for Docker files
 Plug 'suy/vim-context-commentstring'        " sets the value of ‘commentstring’ to a different value depending on the region of the file
+Plug 'leafgarland/typescript-vim'           " typescript syntax files for Vim
 
 " Utility
 Plug 'w0rp/ale'                             " asynchronous linting/fixing
@@ -74,18 +75,25 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 
 " delimitMate
-" DelimitMateTest to see current config
+" :DelimitMateTest to see current config
 let g:delimitMate_expand_cr = 2
 let g:delimitMate_expand_space = 1
 
+" UltiSnips
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsExpandTrigger="<tab>"
+
 " vim-javascript
 let g:javascript_plugin_jsdoc = 1
+
+" vim-markdown
+let g:vim_markdown_new_list_item_indent = 2
 
 " NERDTree
 let NERDTreeShowLineNumbers=1               " Map CTRL + n to toggle NERDTree
 let NERDTreeShowBookmarks=1                 " Open NERDTree bookmark by default
 let g:NERDTreeWinSize=60                    " Increase default width of nerdTree buffer
-let NERDTreeIgnore=['\~$', '\.swp$', '\.swo$', '\.DS$']
+let NERDTreeIgnore=['\~$', '\.swp$', '\.swo$', '\.DS_Store$']
 
 nmap <C-n> :NERDTreeToggle<CR>
 "" autocmd VimEnter * NERDTree              " enable NERDTree open on startup
