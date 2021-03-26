@@ -13,6 +13,9 @@ echo source 0-index.ignore.vim >> ~./.vimrc
 
 ## ------------ PACKAGES ------------ ##
 
+# Apple Command Line Tools
+xcode-select --install
+
 # Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
