@@ -70,6 +70,9 @@ call plug#end()                             " end plugin list
 " Plugin config
 "--------------------
 
+" vim-fugitive
+nnoremap :Gco :Git commit
+
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
