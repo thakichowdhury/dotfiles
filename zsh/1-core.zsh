@@ -7,6 +7,8 @@ export ZSH="/Users/thaki_britney/.oh-my-zsh"
 
 source $ZSH/oh-my-zsh.sh
 
+# set bat theme for syntax highlighting (of fzf, ripgrep, etc)
+export BAT_THEME="gruvbox-dark"
 
 # sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
