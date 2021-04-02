@@ -44,6 +44,7 @@ Plug 'stephpy/vim-yaml'                     " simpler/cleaner syntax highlightin
 Plug 'ekalinin/Dockerfile.vim'              " syntax highlighting for Docker files
 Plug 'suy/vim-context-commentstring'        " sets the value of ‘commentstring’ to a different value depending on the region of the file
 Plug 'leafgarland/typescript-vim'           " typescript syntax files for Vim
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " nodejs extension host for vim & neovim, load extensions like VSCode and host language servers
 
 " Utility
 Plug 'w0rp/ale'                             " asynchronous linting/fixing
@@ -54,7 +55,6 @@ Plug 'heavenshell/vim-jsdoc'                " streamlines the making of jsdoc co
 Plug 'Raimondi/delimitMate'                 " provides insert mode auto-completion for quotes, parens, brackets, etc.
 
 " Files
-Plug 'Valloric/YouCompleteMe'               " auto-suggestion/completion engine
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'                     " vim configurations for FZF
 
@@ -68,7 +68,7 @@ call plug#end()                             " end plugin list
 "--------------------
 
 " vim-fugitive
-nnoremap :Gco :Git commit
+" nnoremap :Gco :Git commit
 
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_insertion = 1
