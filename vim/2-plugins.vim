@@ -39,15 +39,15 @@ Plug 'kshenoy/vim-signature'                " toggle, display and navigate marks
 "---------
 Plug 'pangloss/vim-javascript'              " javascript indentation and syntax support
 Plug 'MaxMEllon/vim-jsx-pretty'             " jsx syntax highlighting
+" Plug 'leafgarland/typescript-vim'           " typescript syntax files for Vim
 Plug 'jparise/vim-graphql'                  " syntax highlighting for graphQL filetypes
 Plug 'stephpy/vim-yaml'                     " simpler/cleaner syntax highlighting for yaml files
 Plug 'ekalinin/Dockerfile.vim'              " syntax highlighting for Docker files
 Plug 'suy/vim-context-commentstring'        " sets the value of ‘commentstring’ to a different value depending on the region of the file
-Plug 'leafgarland/typescript-vim'           " typescript syntax files for Vim
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " nodejs extension host for vim & neovim, load extensions like VSCode and host language servers
 
 " Utility
-Plug 'w0rp/ale'                             " asynchronous linting/fixing
+" Plug 'w0rp/ale'                             " asynchronous linting/fixing
 Plug 'SirVer/ultisnips'                     " snippet manager
 Plug 'jkramer/vim-checkbox'                 " toggles checkboxes
 Plug 'tpope/vim-surround'                   " automates making, altering, and removing surrounding brackets
@@ -66,6 +66,14 @@ call plug#end()                             " end plugin list
 "--------------------
 " Plugin config
 "--------------------
+
+" coc.nvim
+let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-eslint']
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 " vim-fugitive
 " nnoremap :Gco :Git commit
