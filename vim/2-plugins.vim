@@ -67,7 +67,24 @@ call plug#end()                             " end plugin list
 " Plugin config
 "--------------------
 
+" UltiSnips
+nmap <leader>s :UltiSnipsEdit<CR>
+
 " coc.nvim
+
+" remap completion preview window navigation
+" inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
+" inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+" if has("patch-8.1.1564")
+"   " Recently vim can merge signcolumn and number column into one
+"   set signcolumn=number
+" else
+"   set signcolumn=yes
+" endif
+
 let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-eslint']
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
@@ -75,12 +92,32 @@ nmap <silent> gt <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+" Remap keys for applying codeAction to the current buffer.
+nmap <leader>ca <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+    if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+    else
+        call CocAction('doHover')
+    endif
+endfunction
+
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" Give more space for displaying messages.
+set cmdheight=2
+
 " vim-fugitive
 " nnoremap :Gco :Git commit
-
-" YouCompleteMe
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
 
 " delimitMate
 " :DelimitMateTest to see current config
