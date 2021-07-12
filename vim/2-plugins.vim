@@ -48,6 +48,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " nodejs extension host for vim 
 
 " Utility
 " Plug 'w0rp/ale'                             " asynchronous linting/fixing
+Plug 'itchyny/calendar.vim'                 " a calendar application for Vim
 Plug 'SirVer/ultisnips'                     " snippet manager
 Plug 'jkramer/vim-checkbox'                 " toggles checkboxes
 Plug 'tpope/vim-surround'                   " automates making, altering, and removing surrounding brackets
@@ -95,7 +96,7 @@ nmap <silent> gr <Plug>(coc-references)
 " Remap keys for applying codeAction to the current buffer.
 nmap <leader>ca <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
+nmap <leader>fc  <Plug>(coc-fix-current)
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
