@@ -1,3 +1,9 @@
+trash() {
+  echo "Moving $1 to Trash"
+  trash-put $1
+  tree -L 1
+}
+
 jira-create-branch() {
     echo "Enter issue type number"
     echo "(1) feature\n(2) bug\n(3) hotfix"

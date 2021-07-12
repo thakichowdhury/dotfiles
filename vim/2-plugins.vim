@@ -37,27 +37,25 @@ Plug 'kshenoy/vim-signature'                " toggle, display and navigate marks
 
 " Language
 "---------
-" Plug 'neoclide/vim-jsx-improve'             " improved syntax highlighting for javascript and jsx
-" Plug 'mxw/vim-jsx'                          " commented out for conflicts with vim-jsx-improve
 Plug 'pangloss/vim-javascript'              " javascript indentation and syntax support
 Plug 'MaxMEllon/vim-jsx-pretty'             " jsx syntax highlighting
+" Plug 'leafgarland/typescript-vim'           " typescript syntax files for Vim
 Plug 'jparise/vim-graphql'                  " syntax highlighting for graphQL filetypes
 Plug 'stephpy/vim-yaml'                     " simpler/cleaner syntax highlighting for yaml files
 Plug 'ekalinin/Dockerfile.vim'              " syntax highlighting for Docker files
 Plug 'suy/vim-context-commentstring'        " sets the value of ‘commentstring’ to a different value depending on the region of the file
-Plug 'leafgarland/typescript-vim'           " typescript syntax files for Vim
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " nodejs extension host for vim & neovim, load extensions like VSCode and host language servers
 
 " Utility
-Plug 'w0rp/ale'                             " asynchronous linting/fixing
+" Plug 'w0rp/ale'                             " asynchronous linting/fixing
+Plug 'itchyny/calendar.vim'                 " a calendar application for Vim
 Plug 'SirVer/ultisnips'                     " snippet manager
 Plug 'jkramer/vim-checkbox'                 " toggles checkboxes
 Plug 'tpope/vim-surround'                   " automates making, altering, and removing surrounding brackets
-Plug 'heavenshell/vim-jsdoc'                " streamlines the making of jsdoc comments
+" Plug 'heavenshell/vim-jsdoc'                " streamlines the making of jsdoc comments
 Plug 'Raimondi/delimitMate'                 " provides insert mode auto-completion for quotes, parens, brackets, etc.
 
 " Files
-Plug 'Valloric/YouCompleteMe'               " auto-suggestion/completion engine
-" Plug 'mhinz/vim-grepper'                    " utility to help integrate different grep tools // commented out in favor of using ripgrep through FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'                     " vim configurations for FZF
 
@@ -70,9 +68,57 @@ call plug#end()                             " end plugin list
 " Plugin config
 "--------------------
 
-" YouCompleteMe
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
+" UltiSnips
+nmap <leader>s :UltiSnipsEdit<CR>
+
+" coc.nvim
+
+" remap completion preview window navigation
+" inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
+" inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+" if has("patch-8.1.1564")
+"   " Recently vim can merge signcolumn and number column into one
+"   set signcolumn=number
+" else
+"   set signcolumn=yes
+" endif
+
+let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-eslint']
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gt <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Remap keys for applying codeAction to the current buffer.
+nmap <leader>ca <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>fc  <Plug>(coc-fix-current)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+    if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+    else
+        call CocAction('doHover')
+    endif
+endfunction
+
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" Give more space for displaying messages.
+set cmdheight=2
+
+" vim-fugitive
+" nnoremap :Gco :Git commit
 
 " delimitMate
 " :DelimitMateTest to see current config

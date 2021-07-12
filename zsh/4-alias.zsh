@@ -21,19 +21,20 @@ alias vc="vim ~/.vimrc"
 ## tmux
 alias tmux="tmux -2"
 
-## personal
+# directories
 projects="~/Documents/projects"
+projects_active="$projects/active"
 google_drive="~/Google\ Drive"
 
-# directories
-alias notes="cd $google_drive/notes && vim"
+# misc
+alias drive="cd $google_drive"
+alias notes="cd $google_drive/AREAS/notes && vim"
 alias df="cd ~/Documents/dotfiles && vim"
-alias pjs="cd $projects/personal/active"
 alias learning="cd ~/Documents/learning"
-
-## personal
 alias goals="vim $google_drive/rl/goals.md"
 alias reflections="vim $google_drive/rl/reflections.md"
+alias pjs="cd $projects"
+alias pja="cd $projects_active"
 
 ## career
 consulting="~/Documents/consulting"
@@ -43,6 +44,9 @@ alias bmob="cd $blast_app/packages/mobile"
 alias bweb="cd $blast_app/packages/web"
 alias bcom="cd $blast_app/packages/components"
 alias bserv="cd $blast_app/packages/server"
+
+## projects
+alias bsearch="cd $pjs/bookmark-search"
 
 # git alias
 alias gbr="git branch"

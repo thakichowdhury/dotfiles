@@ -1,3 +1,5 @@
+source /Users/thaki_britney/Documents/dotfiles/vim/markdown-checkbox.vim
+
 function Check_and_install_plugin_manager()
   if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -5,3 +7,4 @@ function Check_and_install_plugin_manager()
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
   endif
 endfunction
+
