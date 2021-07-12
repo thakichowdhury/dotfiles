@@ -22,6 +22,7 @@ set guifont=FantasqueSansMono:h13             " set font for GUI (e.g. Macvim)
 " set spellfile=spellfile.utf-8.add           " set file to add to spell-check list
 set foldmethod=indent   
 set foldnestmax=10
+let g:markdown_folding = 1
 set nofoldenable
 set foldlevel=2
 set hidden
@@ -45,6 +46,7 @@ nmap <leader>l :bn<CR>
 nmap <leader>k :bd<CR>
 nnoremap <leader>q :q<CR>
 " nmap gd gdzzviw
+nnoremap <leader>x :call Checkbox()<CR>
 
 " filetype detection
 filetype on                                 " turn on filetype detection 
