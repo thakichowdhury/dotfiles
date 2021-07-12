@@ -27,12 +27,14 @@ projects_active="$projects/active"
 google_drive="~/Google\ Drive"
 
 # misc
-alias notes="cd $google_drive/notes && vim"
+alias drive="cd $google_drive"
+alias notes="cd $google_drive/AREAS/notes && vim"
 alias df="cd ~/Documents/dotfiles && vim"
 alias learning="cd ~/Documents/learning"
 alias goals="vim $google_drive/rl/goals.md"
 alias reflections="vim $google_drive/rl/reflections.md"
-alias pjs="cd $projects_active"
+alias pjs="cd $projects"
+alias pja="cd $projects_active"
 
 ## career
 consulting="~/Documents/consulting"
