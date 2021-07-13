@@ -96,7 +96,7 @@ nmap <silent> gr <Plug>(coc-references)
 " Remap keys for applying codeAction to the current buffer.
 nmap <leader>ca <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
-nmap <leader>fc  <Plug>(coc-fix-current)
+nmap <leader>af  <Plug>(coc-fix-current)
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
