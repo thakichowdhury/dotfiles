@@ -1,7 +1,6 @@
 # Themes
 ZSH_THEME="agnoster"
 
-
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/thaki_britney/.oh-my-zsh"
 
