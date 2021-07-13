@@ -2,6 +2,7 @@
 oh_my_zsh="~/.oh-my-zsh/"
 dotfiles="~/Documents/dotfiles"
 
+
 alias zc="vim $dotfiles/zsh/0-index.zsh"
 alias zcf="vim $dotfiles/zsh/2-functions.zsh"
 alias zca="vim $dotfiles/zsh/3-alias.zsh"
@@ -37,6 +38,7 @@ alias pjs="cd $projects"
 alias pja="cd $projects_active"
 
 ## career
+alias cl="exec python3 ~/Documents/projects/active/document-templating/main.py"
 consulting="~/Documents/consulting"
 blast_app="$consulting/blast-app"
 alias bapp="cd $blast_app"
