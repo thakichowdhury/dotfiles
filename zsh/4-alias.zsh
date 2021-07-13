@@ -40,12 +40,6 @@ alias pja="cd $projects_active"
 ## career
 alias cl="exec python3 ~/Documents/projects/active/document-templating/main.py"
 consulting="~/Documents/consulting"
-blast_app="$consulting/blast-app"
-alias bapp="cd $blast_app"
-alias bmob="cd $blast_app/packages/mobile"
-alias bweb="cd $blast_app/packages/web"
-alias bcom="cd $blast_app/packages/components"
-alias bserv="cd $blast_app/packages/server"
 
 ## projects
 alias bsearch="cd $pjs/bookmark-search"
