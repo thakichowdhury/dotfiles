@@ -117,9 +117,6 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 " Give more space for displaying messages.
 set cmdheight=2
 
-" vim-fugitive
-" nnoremap :Gco :Git commit
-
 " delimitMate
 " :DelimitMateTest to see current config
 let g:delimitMate_expand_cr = 2
