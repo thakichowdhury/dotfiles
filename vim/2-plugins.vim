@@ -68,6 +68,9 @@ call plug#end()                             " end plugin list
 " Plugin config
 "--------------------
 
+" vim-fugitive
+:command Gco Git commit
+
 " UltiSnips
 nmap <leader>s :UltiSnipsEdit<CR>
 
