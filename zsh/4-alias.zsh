@@ -36,6 +36,8 @@ alias goals="vim $google_drive/rl/goals.md"
 alias reflections="vim $google_drive/rl/reflections.md"
 alias pjs="cd $projects"
 alias pja="cd $projects_active"
+alias pjc="cd $projects/challenges/company/Trunk/hw-project-repo"
+alias ctci="cd $projects_active/CtCi-6th-Edition-TypeScript"
 
 ## career
 alias cl="exec python3 ~/Documents/projects/active/document-templating/main.py"
@@ -72,3 +74,6 @@ alias ybs="yarn run build && yarn run start"
 # python
 # alias python=/usr/local/bin/python3
 alias pi="pipenv install"
+
+# postgresql
+alias psqlstart="brew services start postgresql"
