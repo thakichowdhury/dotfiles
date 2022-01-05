@@ -85,3 +85,6 @@ if has("clipboard")
     set clipboard+=unnamedplus
   endif
 endif
+
+" markdown
+let g:markdown_fenced_languages = ['javascript', 'typescript', 'html', 'python', 'bash=sh']
