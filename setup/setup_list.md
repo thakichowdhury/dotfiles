@@ -20,6 +20,10 @@
   - `brew install python`
 - [iTerm2](https://formulae.brew.sh/cask/iterm2#default)
   - `brew install --cask iterm2`
+- [FZF](https://formulae.brew.sh/formula/fzf#default)
+  - `brew install fzf`
+- [ripgrep](https://formulae.brew.sh/formula/ripgrep#default)
+  - `brew install ripgrep`
 - [Zoom](https://formulae.brew.sh/cask/zoom#default)
   - `brew install --cask zoom`
 - [Obsidian MD](https://formulae.brew.sh/cask/obsidian)
