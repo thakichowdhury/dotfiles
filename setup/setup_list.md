@@ -6,14 +6,18 @@
 
 ## Homebrew packages
 ### Core
-- [Chrome](https://formulae.brew.sh/cask/google-chrome)
-  - `brew install --cask google-chrome`
 - [Vim](https://formulae.brew.sh/formula/vim#default)
   - `brew install vim`
 - [Git](https://formulae.brew.sh/formula/git#default)
   - `brew install git`
 - [zsh](https://formulae.brew.sh/formula/zsh#default)
   - `brew install zsh`
+- [Ruby](https://formulae.brew.sh/formula/ruby#default)
+  - `brew install ruby`
+- [Node](https://formulae.brew.sh/formula/node#default)
+  - `brew install node`
+- [Python3](https://docs.python-guide.org/starting/install3/osx/)
+  - `brew install python`
 - [iTerm2](https://formulae.brew.sh/cask/iterm2#default)
   - `brew install --cask iterm2`
 - [Zoom](https://formulae.brew.sh/cask/zoom#default)
@@ -24,20 +28,12 @@
   - `brew install flux`
 - [Alfred](https://formulae.brew.sh/cask/alfred#default)
   - `brew install --cask alfred`
-- [Ruby](https://formulae.brew.sh/formula/ruby#default)
-  - `brew install ruby`
-- [Node](https://formulae.brew.sh/formula/node#default)
-  - `brew install node`
+- [Chrome](https://formulae.brew.sh/cask/google-chrome)
+  - `brew install --cask google-chrome`
 - [Xcode](https://formulae.brew.sh/cask/xcodes#default)
   - `brew install --cask xcodes`
-- [Python3](https://docs.python-guide.org/starting/install3/osx/)
-  - `brew install python`
-
 
 ### Optional
-- [MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/)
-  - `brew tap mongodb/brew`
-  - `brew install mongodb-community@5.0`
 - [Android Studio](https://formulae.brew.sh/cask/android-studio#default)
   - `brew install --cask android-studio`
 - [Docker](https://formulae.brew.sh/formula/docker#default)
@@ -52,3 +48,6 @@
   - `brew install --cask microsoft-teams`
 - [Figma](https://formulae.brew.sh/cask/figma#default)
   - `brew install --cask figma`
+- [MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/)
+  - `brew tap mongodb/brew`
+  - `brew install mongodb-community@5.0`
