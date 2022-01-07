@@ -1,6 +1,10 @@
+# install xcode command line tools
+echo "Installing Xcode command line tools"
+eval 'xcode-select --install'
+
 # install Homebrew
 echo "Installing Homebrew"
-$(/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)")
+eval '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
 $(export PATH="/usr/local/opt/python/libexec/bin:$PATH")
 
 
@@ -14,6 +18,7 @@ declare -a packages=(
   'python'
   'fzf'
   'ripgrep'
+  '--cask 1password'
   '--cask iterm2'
   '--cask zoom'
   '--cask obsidian'
@@ -31,8 +36,7 @@ declare -a packages=(
   '--cask microsoft-teams'
   '--cask figma'
   # mongodb
-  'brew tap mongodb/brew'
-  'brew install mongodb-community@5.0'
+  'mongodb-community@5.0'
 )
 
 for package in "${packages[@]}"; do
