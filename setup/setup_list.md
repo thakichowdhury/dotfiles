@@ -18,6 +18,8 @@
   - `brew install node`
 - [Python3](https://docs.python-guide.org/starting/install3/osx/)
   - `brew install python`
+- [1Password](https://formulae.brew.sh/cask/1password#default)
+  - `brew install --cask 1password`
 - [iTerm2](https://formulae.brew.sh/cask/iterm2#default)
   - `brew install --cask iterm2`
 - [FZF](https://formulae.brew.sh/formula/fzf#default)
