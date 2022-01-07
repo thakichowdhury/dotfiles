@@ -6,6 +6,10 @@ eval 'xcode-select --install'
 echo "Installing Homebrew"
 eval '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
 
+# install oh-my-zsh
+echo "Installing oh-myzsh"
+eval 'sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
+
 declare -a packages=(
   # core
   'vim'
