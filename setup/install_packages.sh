@@ -4,6 +4,7 @@ $(export PATH="/usr/local/opt/python/libexec/bin:$PATH")
 
 
 declare -a packages=(
+  # core
   'vim'
   'git'
   'zsh'
@@ -15,8 +16,10 @@ declare -a packages=(
   '--cask obsidian'
   'flux'
   '--cask alfred'
-  '--cask google-chrome'
   '--cask xcodes'
+
+  # optional
+  '--cask google-chrome'
   '--cask android-studio'
   'docker'
   '--cask discord'
