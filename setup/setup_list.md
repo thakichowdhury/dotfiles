@@ -22,6 +22,9 @@
   - `brew install --cask 1password`
 - [iTerm2](https://formulae.brew.sh/cask/iterm2#default)
   - `brew install --cask iterm2`
+- [fd](https://formulae.brew.sh/formula/fd#default)
+  - `brew install fd`
+  - FZF dependency
 - [FZF](https://formulae.brew.sh/formula/fzf#default)
   - `brew install fzf`
 - [ripgrep](https://formulae.brew.sh/formula/ripgrep#default)

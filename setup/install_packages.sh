@@ -14,6 +14,7 @@ declare -a packages=(
   'ruby'
   'node'
   'python'
+  'fd'
   'fzf'
   'ripgrep'
   '--cask 1password'
