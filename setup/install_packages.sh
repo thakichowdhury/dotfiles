@@ -11,6 +11,7 @@ declare -a packages=(
   'vim'
   'git'
   'zsh'
+  'tree'
   'ruby'
   'node'
   'python'

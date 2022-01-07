@@ -12,6 +12,8 @@
   - `brew install git`
 - [zsh](https://formulae.brew.sh/formula/zsh#default)
   - `brew install zsh`
+- [tree](https://formulae.brew.sh/formula/tree#default)
+  - `brew install tree'`
 - [Ruby](https://formulae.brew.sh/formula/ruby#default)
   - `brew install ruby`
 - [Node](https://formulae.brew.sh/formula/node#default)
