@@ -1,4 +1,5 @@
 # install Homebrew
+echo "Installing Homebrew"
 $(/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)")
 $(export PATH="/usr/local/opt/python/libexec/bin:$PATH")
 
@@ -35,5 +36,6 @@ declare -a packages=(
 )
 
 for package in "${packages[@]}"; do
+  echo "Installing $package"
   $(brew install $package)
 done
