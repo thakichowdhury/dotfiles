@@ -10,7 +10,7 @@ declare -a packages=(
   'zsh'
   'ruby'
   'node'
-  'brew install python'
+  'python'
   '--cask iterm2'
   '--cask zoom'
   '--cask obsidian'
