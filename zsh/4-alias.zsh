@@ -5,7 +5,7 @@ dotfiles="~/Documents/dotfiles"
 
 alias zc="vim $dotfiles/zsh/0-index.zsh"
 alias zcf="vim $dotfiles/zsh/2-functions.zsh"
-alias zca="vim $dotfiles/zsh/3-alias.zsh"
+alias zca="vim $dotfiles/zsh/4-alias.zsh"
 
 alias pj="vim package.json"
 alias pjl="vim package-lock.json"
