@@ -11,6 +11,8 @@ declare -a packages=(
   'ruby'
   'node'
   'python'
+  'fzf'
+  'ripgrep'
   '--cask iterm2'
   '--cask zoom'
   '--cask obsidian'
