@@ -22,6 +22,7 @@ declare -a packages=(
   'fd'
   'fzf'
   'ripgrep'
+  'slack'
   '--cask 1password'
   '--cask iterm2'
   '--cask zoom'
