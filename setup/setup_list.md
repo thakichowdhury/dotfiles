@@ -41,8 +41,8 @@
   - `brew install --cask zoom`
 - [Obsidian MD](https://formulae.brew.sh/cask/obsidian)
   - `brew install --cask obsidian`
-- [Flux](https://formulae.brew.sh/formula/flux#default)
-  - `brew install flux`
+- [Flux](https://formulae.brew.sh/cask/flux#default)
+  - `brew install --cask flux`
 - [Alfred](https://formulae.brew.sh/cask/alfred#default)
   - `brew install --cask alfred`
 - [Chrome](https://formulae.brew.sh/cask/google-chrome)

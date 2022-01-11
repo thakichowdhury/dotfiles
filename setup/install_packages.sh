@@ -28,7 +28,7 @@ declare -a packages=(
   '--cask iterm2'
   '--cask zoom'
   '--cask obsidian'
-  'flux'
+  '--cask flux'
   '--cask alfred'
   '--cask xcodes'
 
