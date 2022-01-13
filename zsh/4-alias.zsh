@@ -77,3 +77,9 @@ alias pi="pipenv install"
 
 # postgresql
 alias psqlstart="brew services start postgresql"
+
+# work
+daylight_dir="~/Documents/daylight"
+alias daylight="cd $daylight_dir"
+alias dfe="cd $daylight_dir/tribal-monorepo"
+alias dbe="cd $daylight_dir/daylight_api"
