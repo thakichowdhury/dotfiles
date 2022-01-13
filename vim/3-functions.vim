@@ -1,4 +1,4 @@
-source /Users/thaki_britney/Documents/dotfiles/vim/markdown-checkbox.vim
+source /Users/$LOGNAME/Documents/dotfiles/vim/markdown-checkbox.vim
 
 function Check_and_install_plugin_manager()
   if empty(glob('~/.vim/autoload/plug.vim'))

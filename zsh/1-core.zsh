@@ -2,7 +2,7 @@
 ZSH_THEME="agnoster"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/thaki_britney/.oh-my-zsh"
+export ZSH="/Users/$LOGNAME/.oh-my-zsh"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -21,7 +21,7 @@ export FZF_DEFAULT_COMMAND='fd --type f'            # Setting fd as the default 
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"    # To apply the command to CTRL-T as well
 
 # Android paths for React Native setup
-export ANDROID_HOME=/Users/thaki_britney/Library/Android/sdk
+export ANDROID_HOME=/Users/$LOGNAME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
@@ -31,3 +31,5 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
 export PATH=$JAVA_HOME/bin:$PATH
 
+# export path for rbenv
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
