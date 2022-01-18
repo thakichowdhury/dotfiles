@@ -41,6 +41,7 @@ declare -a packages=(
   '--cask selfcontrol'
   '--cask microsoft-teams'
   '--cask figma'
+  '--cask notion'
   # mongodb
   'mongodb-community@5.0'
 )

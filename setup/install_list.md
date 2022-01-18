@@ -10,6 +10,8 @@
 ### Core
 - [Vim](https://formulae.brew.sh/formula/vim#default)
   - `brew install vim`
+   - [Solargraph](https://formulae.brew.sh/formula/solargraph#default)
+    - `brew install solargraph`
 - [Git](https://formulae.brew.sh/formula/git#default)
   - `brew install git`
 - [zsh](https://formulae.brew.sh/formula/zsh#default)
@@ -47,6 +49,8 @@
   - `brew install --cask alfred`
 - [Chrome](https://formulae.brew.sh/cask/google-chrome)
   - `brew install --cask google-chrome`
+- [Notion](https://formulae.brew.sh/cask/notion#default)
+  - `brew install --cask notion`
 - [Xcode](https://formulae.brew.sh/cask/xcodes#default)
   - `brew install --cask xcodes`
 
