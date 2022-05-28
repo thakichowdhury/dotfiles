@@ -48,8 +48,8 @@ alias bsearch="cd $pjs/bookmark-search"
 
 # git alias
 alias gbr="git branch"
-alias gch="git checkout"
-alias gbm="git checkout -b"
+alias gch="git checkout"        # checks out an existing branch
+alias gbm="git checkout -b"     # creates a new git branch
 alias gs="git status"
 alias gd="git diff"
 alias ga="git add"
@@ -83,3 +83,9 @@ daylight_dir="~/Documents/daylight"
 alias daylight="cd $daylight_dir"
 alias dfe="cd $daylight_dir/tribal-monorepo"
 alias dbe="cd $daylight_dir/daylight_api"
+daylight_admin_auth_token="RUKwBFFMiWtzejLmHrkwg8E9E56spDPP"
+alias admin_user_auth_token="echo $daylight_admin_auth_token | pbcopy && echo $daylight_admin_auth_token copied to clipboard"
+
+# school
+alias school="$projects/school/cs162"
+alias current_pj=""

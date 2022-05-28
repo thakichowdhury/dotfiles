@@ -4,6 +4,10 @@ trash() {
   tree -L 1
 }
 
+running_on_port() {
+  lsof -i :$1
+}
+
 jira-create-branch() {
     echo "Enter issue type number"
     echo "(1) feature\n(2) bug\n(3) hotfix"
@@ -83,3 +87,14 @@ clean_directory() {
 
   eval "$package_manager install"
 }
+
+heroku_login() {
+  if [[ $1 == "stage" ]]; then
+    heroku run ADMIN_USER_TOKEN=$ADMIN_USER_TOKEN_STAGING rails c --app joindaylight-api-staging
+  elif [[ $1 == "prod" ]]; then
+    heroku run ADMIN_USER_TOKEN=$ADMIN_USER_TOKEN_PROD rails c --app joindaylight-api
+  else
+    heroku run ADMIN_USER_TOKEN=$ADMIN_USER_TOKEN_STAGING rails c --app joindaylight-api-development
+  fi
+}
+
