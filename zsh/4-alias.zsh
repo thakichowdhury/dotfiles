@@ -75,6 +75,9 @@ alias ybs="yarn run build && yarn run start"
 # alias python=/usr/local/bin/python3
 alias pi="pipenv install"
 
+# ruby/rails
+alias be="bundle exec"
+
 # postgresql
 alias psqlstart="brew services start postgresql"
 

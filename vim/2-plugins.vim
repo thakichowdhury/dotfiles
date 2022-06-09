@@ -46,6 +46,9 @@ Plug 'ekalinin/Dockerfile.vim'              " syntax highlighting for Docker fil
 Plug 'suy/vim-context-commentstring'        " sets the value of ‘commentstring’ to a different value depending on the region of the file
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " nodejs extension host for vim & neovim, load extensions like VSCode and host language servers
 Plug 'iamcco/coc-diagnostic'                " diagnostic-languageserver extension for CoC
+Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'} " Language Server Protocol (LSP) support for vim and neovim
+Plug 'tpope/vim-rails'                      " rails.vim: Ruby on Rails power tools
+Plug 'vim-ruby/vim-ruby'                    " Vim/Ruby Configuration Files
 
 " Utility
 " Plug 'w0rp/ale'                             " asynchronous linting/fixing
@@ -91,7 +94,7 @@ nmap <leader>s :UltiSnipsEdit<CR>
 "   set signcolumn=yes
 " endif
 
-let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-eslint', 'coc-solargraph', 'coc-diagnostic']
+let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-eslint', 'coc-solargraph', 'coc-diagnostic', 'coc-pyright']
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gt <Plug>(coc-type-definition)
