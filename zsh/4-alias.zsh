@@ -29,7 +29,7 @@ google_drive="~/Google\ Drive"
 
 # misc
 alias drive="cd $google_drive"
-alias notes="cd $google_drive/AREAS/notes && vim"
+alias notes="cd ~/Documents/notes && vim"
 alias df="cd ~/Documents/dotfiles && vim"
 alias learning="cd ~/Documents/learning"
 alias goals="vim $google_drive/rl/goals.md"
