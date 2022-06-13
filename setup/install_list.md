@@ -35,6 +35,10 @@
 - [fd](https://formulae.brew.sh/formula/fd#default)
   - `brew install fd`
   - FZF dependency
+- [bat](https://github.com/sharkdp/bat)
+  - `brew install bat`
+  - Replacement for `cat`
+    - Add syntax highlighting for files
 - [FZF](https://formulae.brew.sh/formula/fzf#default)
   - `brew install fzf`
 - [ripgrep](https://formulae.brew.sh/formula/ripgrep#default)

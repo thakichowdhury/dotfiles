@@ -20,6 +20,7 @@ declare -a packages=(
   'node'
   'python'
   'fd'
+  'bat'
   'fzf'
   'ripgrep'
   'slack'
