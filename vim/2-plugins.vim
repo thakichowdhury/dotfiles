@@ -14,7 +14,7 @@ call plug#begin('~/.vim/plugged')           " start plugin list
 
 " Git
 "---------
-Plug 'tpope/vim-fugitive'                   " better UI for git functions
+Plug 'tpope/vim-fugitive', { 'commit': '92c73bb0507338441733198d630a1fe5e7fdac3a' }                   " better UI for git functions
 Plug 'idanarye/vim-merginal'                " extended, friendlier user interface for git piggybacking off of vim-fugitive
 
 " Navigation
@@ -34,6 +34,7 @@ Plug 'morhetz/gruvbox'                      " gruvbox theme
 Plug 'ryanoasis/vim-devicons'               " render dev-icons and glyphs when used with a patched NERD-font
 Plug 'mhinz/vim-startify'                   " a fancy start screen for vim/neovim
 Plug 'kshenoy/vim-signature'                " toggle, display and navigate marks
+Plug 'mhinz/vim-signify'                    " Show a diff using Vim its sign column
 
 " Language
 "---------
@@ -57,7 +58,7 @@ Plug 'SirVer/ultisnips'                     " snippet manager
 Plug 'jkramer/vim-checkbox'                 " toggles checkboxes
 Plug 'tpope/vim-surround'                   " automates making, altering, and removing surrounding brackets
 " Plug 'heavenshell/vim-jsdoc'                " streamlines the making of jsdoc comments
-Plug 'Raimondi/delimitMate'                 " provides insert mode auto-completion for quotes, parens, brackets, etc.
+" Plug 'Raimondi/delimitMate'                 " provides insert mode auto-completion for quotes, parens, brackets, etc.
 
 " Files
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
