@@ -88,6 +88,7 @@ alias dfe="cd $daylight_dir/tribal-monorepo"
 alias dbe="cd $daylight_dir/daylight_api"
 daylight_admin_auth_token="RUKwBFFMiWtzejLmHrkwg8E9E56spDPP"
 alias admin_user_auth_token="echo $daylight_admin_auth_token | pbcopy && echo $daylight_admin_auth_token copied to clipboard"
+alias check_eslint="yarn check-eslint --fix && yarn check-ts && yarn check-prettier-schemas && yarn check-circular && yarn check-unused-exports"
 
 # school
 alias school="$projects/school/cs162"
