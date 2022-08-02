@@ -159,6 +159,8 @@ nmap <leader>m :MerginalToggle<CR>
 " FZF
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>g :Rg<cr>
+" excludes filenames from Rg regex pattern search
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0) 
 
 " Airline
 let g:airline_theme = 'gruvbox'             " set airline statusbar color-scheme
