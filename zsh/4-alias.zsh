@@ -84,10 +84,10 @@ alias psqlstart="brew services start postgresql"
 # work
 daylight_dir="~/Documents/daylight"
 alias daylight="cd $daylight_dir"
-alias dfe="cd $daylight_dir/tribal-monorepo"
+alias dfe="cd $daylight_dir/tribal-monorepo/frontend"
 alias dbe="cd $daylight_dir/daylight_api"
-daylight_admin_auth_token="RUKwBFFMiWtzejLmHrkwg8E9E56spDPP"
-alias admin_user_auth_token="echo $daylight_admin_auth_token | pbcopy && echo $daylight_admin_auth_token copied to clipboard"
+alias dws="cd $daylight_dir/daylight"
+alias admin_user_auth_token="echo $daylight_admin_auth_token_staging | pbcopy && echo $daylight_admin_auth_token_staging copied to clipboard"
 alias check_eslint="yarn check-eslint --fix && yarn check-ts && yarn check-prettier-schemas && yarn check-circular && yarn check-unused-exports"
 
 # school
