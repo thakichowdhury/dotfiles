@@ -88,13 +88,13 @@ clean_directory() {
   eval "$package_manager install"
 }
 
-heroku_login() {
+daylight_remote_rails_login() {
   if [[ $1 == "stage" || $1 == "s" ]]; then
-    heroku run ADMIN_USER_TOKEN=$ADMIN_USER_TOKEN_STAGING rails c --app joindaylight-api-staging
+    heroku run ADMIN_USER_TOKEN=$RAILS_ADMIN_USER_TOKEN_STAGING rails c --app joindaylight-api-staging
   elif [[ $1 == "prod" || $1 == "p" ]]; then
-    heroku run ADMIN_USER_TOKEN=$ADMIN_USER_TOKEN_PROD rails c --app joindaylight-api
+    heroku run ADMIN_USER_TOKEN=$RAILS_ADMIN_USER_TOKEN_PROD rails c --app joindaylight-api
   else
-    heroku run ADMIN_USER_TOKEN=$ADMIN_USER_TOKEN_STAGING rails c --app joindaylight-api-development
+    heroku run ADMIN_USER_TOKEN=$RAILS_ADMIN_USER_TOKEN_STAGING rails c --app joindaylight-api-development
   fi
 }
 
