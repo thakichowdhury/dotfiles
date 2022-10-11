@@ -29,7 +29,9 @@ google_drive="~/Google\ Drive"
 
 # misc
 alias drive="cd $google_drive"
-alias notes="cd ~/Documents/notes && vim"
+notes_dir="~/Documents/notes"
+alias notes="cd $notes_dir && vim"
+alias todo="vim -p $notes_dir/AREAS/Daily/TODO/__TODO__Single.md $notes_dir/AREAS/Daily/TODO/__TODO__Recurring.md"
 alias df="cd ~/Documents/dotfiles && vim"
 alias learning="cd ~/Documents/learning"
 alias goals="vim $google_drive/rl/goals.md"
@@ -59,7 +61,7 @@ alias gp="git push"
 alias gpl="git pull"
 alias gts="git stash"
 alias gtsd="git add . && git stash && git stash drop"
-alias hist="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
+alias ghist="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
 
 # npm alias
 alias nr="npm run"
@@ -86,10 +88,13 @@ daylight_dir="~/Documents/daylight"
 alias daylight="cd $daylight_dir"
 alias dfe="cd $daylight_dir/tribal-monorepo/frontend"
 alias dbe="cd $daylight_dir/daylight_api"
-alias dws="cd $daylight_dir/daylight"
-alias admin_user_auth_token="echo $daylight_admin_auth_token_staging | pbcopy && echo $daylight_admin_auth_token_staging copied to clipboard"
+alias dbe2="cd $daylight_dir/daylight"
+alias dweb="cd $daylight_dir/daylight_web"
+alias admin_user_auth_token="echo $RAILS_ADMIN_USER_TOKEN_STAGING | pbcopy && echo $RAILS_ADMIN_USER_TOKEN_STAGING copied to clipboard"
 alias check_eslint="yarn check-eslint --fix && yarn check-ts && yarn check-prettier-schemas && yarn check-circular && yarn check-unused-exports"
 
 # school
 alias school="$projects/school/cs162"
 alias current_pj=""
+
+alias refresh="source ~/.zshrc && source ~/.vimrc"
