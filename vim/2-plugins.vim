@@ -54,7 +54,7 @@ Plug 'vim-ruby/vim-ruby'                    " Vim/Ruby Configuration Files
 " Utility
 " Plug 'w0rp/ale'                             " asynchronous linting/fixing
 Plug 'itchyny/calendar.vim'                 " a calendar application for Vim
-Plug 'SirVer/ultisnips'                     " snippet manager
+" Plug 'SirVer/ultisnips'                     " snippet manager
 Plug 'jkramer/vim-checkbox'                 " toggles checkboxes
 Plug 'tpope/vim-surround'                   " automates making, altering, and removing surrounding brackets
 " Plug 'heavenshell/vim-jsdoc'                " streamlines the making of jsdoc comments
@@ -78,9 +78,26 @@ call plug#end()                             " end plugin list
 :command Gbl Git blame
 
 " UltiSnips
-nmap <leader>s :UltiSnipsEdit<CR>
+" nmap <leader>s :UltiSnipsEdit<CR>
+" let g:UltiSnipsSnippetDirectories=[""]
 
 " coc.nvim
+
+"" open snippet edit screen
+nmap <leader>s :CocCommand snippets.editSnippets<CR>
+
+inoremap <silent><expr> <TAB>
+      \ coc#pum#visible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ CheckBackSpace() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! CheckBackSpace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+let g:coc_snippet_next = '<tab>'
 
 " remap completion preview window navigation
 " inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
@@ -95,7 +112,7 @@ nmap <leader>s :UltiSnipsEdit<CR>
 "   set signcolumn=yes
 " endif
 
-let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-eslint', 'coc-solargraph', 'coc-diagnostic', 'coc-pyright']
+let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-eslint', 'coc-solargraph', 'coc-diagnostic', 'coc-pyright', 'coc-snippets']
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gt <Plug>(coc-type-definition)
@@ -169,7 +186,7 @@ let g:airline#extensions#tabline#enabled=1  " enable top buffer/tab bar to be se
 
 " vim-indent-guides
 let g:indent_guides_enable_on_vim_startup=1 " enable indent-guides on vim startup
-let g:indent_guides_auto_colors = 0         " disallow indent-guides to inherit colors from color-scheme
+let g:indent_guides_auto_colors = 1         " disallow indent-guides to inherit colors from color-scheme
 let g:indent_guides_guide_size = 1          " set width of indent-guides
 
 " jsdoc.vim
