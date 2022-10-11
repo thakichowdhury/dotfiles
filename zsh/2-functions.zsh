@@ -98,3 +98,48 @@ daylight_remote_rails_login() {
   fi
 }
 
+print_heroku_instances() {
+  heroku_instances=(
+    "daylight-prod"
+    "daylight-stage"
+    "daylight-dev"
+    "daylight-web-prod"
+    "daylight-web-staging"
+    "daylight-web-dev"
+    "joindaylight-api"
+    "joindaylight-api-staging"
+    "joindaylight-api-development"
+  )
+
+  for ((i = 1; i <= $#heroku_instances; i++)); do
+    printf "%s\t\n" "$i ${heroku_instances[i]}"
+  done
+}
+
+daylight_remote() {
+  if [[ $1 == "login" ]]; then
+    daylight_remote_rails_login $2
+  elif [[ $1 == "deploy" ]]; then
+    daylight_remote_heroku_deploy
+  fi
+}
+
+daylight_remote_heroku_deploy() {
+  print_heroku_instances
+
+  vared -p "Choose heroku instance: " -c chosen_index
+  heroku_instance="${heroku_instances[chosen_index]}"
+
+  print "DEPLOYING TO $heroku_instance..."
+  git push https://git.heroku.com/$heroku_instance.git develop:main -f
+}
+
+daylight_remote_rails_login() {
+  if [[ $1 == "stage" || $1 == "s" ]]; then
+    heroku run ADMIN_USER_TOKEN=$RAILS_ADMIN_USER_TOKEN_STAGING rails c --app joindaylight-api-staging
+  elif [[ $1 == "prod" || $1 == "p" ]]; then
+    heroku run ADMIN_USER_TOKEN=$RAILS_ADMIN_USER_TOKEN_PROD rails c --app joindaylight-api
+  else
+    heroku run ADMIN_USER_TOKEN=$RAILS_ADMIN_USER_TOKEN_STAGING rails c --app joindaylight-api-development
+  fi
+}
