@@ -54,7 +54,7 @@ class DaylightRemote
     def get_choice(prompt:, choices:)
       p "get_choice", [prompt, choices]
       choices.each.with_index{|v, i| puts "#{i} #{v}"}
-      choices[gets.chomp.to_i]
+      choices[STDIN.gets.chomp.to_i]
     end
 
     def daylight_v1
@@ -86,14 +86,3 @@ end
     system("heroku run  rails c --app #{instance_name}")
   end
 end
-
-daylight_remote = DaylightRemote.new()
-
-daylight_remote.operation = ARGV[0] || daylight_remote.choose_operation
-daylight_remote.choose_app
-
-# if ARGV[1] == nil
-#   daylight_remote.choose_app
-# end
-
-daylight_remote.run
