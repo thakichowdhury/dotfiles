@@ -1,3 +1,7 @@
+daylight_remote() {
+  eval "ruby /Users/thakichowdhury/Documents/dotfiles/bin/daylight_remote.rb $@"
+}
+
 trash() {
   echo "Moving $1 to Trash"
   trash-put $1
@@ -116,13 +120,13 @@ print_heroku_instances() {
   done
 }
 
-daylight_remote() {
-  if [[ $1 == "login" ]]; then
-    daylight_remote_rails_login $2
-  elif [[ $1 == "deploy" ]]; then
-    daylight_remote_heroku_deploy
-  fi
-}
+# daylight_remote() {
+#   if [[ $1 == "login" ]]; then
+#     daylight_remote_rails_login $2
+#   elif [[ $1 == "deploy" ]]; then
+#     daylight_remote_heroku_deploy
+#   fi
+# }
 
 daylight_remote_heroku_deploy() {
   print_heroku_instances
