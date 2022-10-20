@@ -1,5 +1,5 @@
 daylight_remote() {
-  eval "ruby /Users/thakichowdhury/Documents/dotfiles/bin/daylight_remote.rb $@"
+  eval "ruby /Users/thakichowdhury/Documents/dotfiles/bin/daylight_remote_call.rb $@"
 }
 
 trash() {
