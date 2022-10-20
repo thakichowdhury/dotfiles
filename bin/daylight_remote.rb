@@ -68,14 +68,6 @@ class DaylightRemote
     def daylight_be
       Environment.new("daylight-dev", "daylight-stage", "daylight-prod")
     end
-
-    def client
-      @client ||= init_client
-    end
-
-    def init_client
-      Heroku.new()
-    end
 end
 
 class Heroku
