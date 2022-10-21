@@ -1,11 +1,26 @@
 #!/usr/bin/env ruby
 
 class DaylightRemote
-  attr_accessor :operation, :instance
+  attr_reader :operation, :instance, :app, :environment
   Environment = Struct.new(:development, :staging, :production)
 
   def initialize(operation=nil)
     @operation = operation
+  end
+
+  def operation=(input)
+    raise "'#{input}' is not a valid input for an operation. Valid inputs include: #{operations}" unless operations.include? input
+    @operation = input
+  end
+
+  def app=(input)
+    raise "'#{input}' is not a valid input for an app. Valid inputs include: #{app_areas}" unless app_areas.include? input
+    @app = input
+  end
+
+  def environment=(input)
+    raise "'#{input}' is not a valid input for an environment. Valid inputs include: #{environments}" unless environments.include? input
+    @environment = input
   end
 
   def choose_operation
@@ -13,27 +28,27 @@ class DaylightRemote
   end
 
   def choose_app
-    app_area = get_choice(prompt: "Choose app:", choices: apps)
-    app = self.send(app_area.to_sym)
+    @app = get_choice(prompt: "Choose app:", choices: app_areas)
+  end
 
-    environment = get_choice(prompt: "Choose environment:", choices: environments)
-
-    app_instance_name = app.send(environment.to_sym)
-
-    @instance = Heroku.new(instance_name: app_instance_name)
+  def choose_environment
+    @environment = get_choice(prompt: "Choose environment:", choices: environments)
   end
 
   def run
+    app_environments = self.send(app.to_sym)
+    app_instance_name = app_environments.send(environment.to_sym)
+    @instance = Heroku.new(instance_name: app_instance_name)
     @instance.send(operation.to_sym)
   end
   
   private
-    def apps
+    def app_areas
       %w(
         daylight_web
         daylight_be
         daylight_v1
-      )
+      ).freeze
     end
 
     def environments
@@ -41,18 +56,17 @@ class DaylightRemote
         development
         staging
         production
-      )
+      ).freeze
     end
 
     def operations
       %w(
-        rails
+        rails_console
         deploy
-      )
+      ).freeze
     end
 
     def get_choice(prompt:, choices:)
-      p "get_choice", [prompt, choices]
       choices.each.with_index{|v, i| puts "#{i} #{v}"}
       choices[STDIN.gets.chomp.to_i]
     end
@@ -82,7 +96,7 @@ class Heroku
     system("git push https://git.heroku.com/#{instance_name}.git develop:main")
 end
 
-  def rails
-    system("heroku run  rails c --app #{instance_name}")
+  def rails_console
+    system("heroku run rails c --app #{instance_name}")
   end
 end
