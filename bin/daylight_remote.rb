@@ -9,17 +9,17 @@ class DaylightRemote
   end
 
   def operation=(input)
-    raise "'#{input}' is not a valid input for an operation. Valid inputs include: #{operations}" unless operations.include? input
+    validate_input(input: input, valid_inputs: operations)
     @operation = input
   end
 
   def app=(input)
-    raise "'#{input}' is not a valid input for an app. Valid inputs include: #{app_areas}" unless app_areas.include? input
+    validate_input(input: input, valid_inputs: app_areas)
     @app = input
   end
 
   def environment=(input)
-    raise "'#{input}' is not a valid input for an environment. Valid inputs include: #{environments}" unless environments.include? input
+    validate_input(input: input, valid_inputs: environments)
     @environment = input
   end
 
@@ -36,6 +36,8 @@ class DaylightRemote
   end
 
   def run
+    validate_required_fields_completed
+
     app_environments = self.send(app.to_sym)
     app_instance_name = app_environments.send(environment.to_sym)
     instance = Heroku.new(instance_name: app_instance_name)
@@ -43,6 +45,16 @@ class DaylightRemote
   end
   
   private
+    def validate_input(input:, valid_inputs:)
+      raise "'#{input}' is not a valid input! Valid inputs include: #{valid_inputs}" unless valid_inputs.include? input
+    end
+
+    def validate_required_fields_completed
+      validate_input(input: operation, valid_inputs: operations)
+      validate_input(input: app, valid_inputs: app_areas)
+      validate_input(input: environment, valid_inputs: environments)
+    end
+
     def app_areas
       %w(
         daylight_web
