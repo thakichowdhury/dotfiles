@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 class DaylightRemote
-  attr_reader :operation, :instance, :app, :environment
+  attr_reader :operation, :app, :environment
   Environment = Struct.new(:development, :staging, :production)
 
   def initialize(operation=nil)
@@ -24,22 +24,22 @@ class DaylightRemote
   end
 
   def choose_operation
-    @operation = get_choice(prompt: "Choose operation:", choices: operations)
+    operation = get_choice(prompt: "Choose operation:", choices: operations)
   end
 
   def choose_app
-    @app = get_choice(prompt: "Choose app:", choices: app_areas)
+    app = get_choice(prompt: "Choose app:", choices: app_areas)
   end
 
   def choose_environment
-    @environment = get_choice(prompt: "Choose environment:", choices: environments)
+    environment = get_choice(prompt: "Choose environment:", choices: environments)
   end
 
   def run
     app_environments = self.send(app.to_sym)
     app_instance_name = app_environments.send(environment.to_sym)
-    @instance = Heroku.new(instance_name: app_instance_name)
-    @instance.send(operation.to_sym)
+    instance = Heroku.new(instance_name: app_instance_name)
+    instance.send(operation.to_sym)
   end
   
   private
