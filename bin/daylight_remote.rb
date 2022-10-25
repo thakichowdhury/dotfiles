@@ -35,12 +35,12 @@ class DaylightRemote
     environment = get_choice(prompt: "Choose environment:", choices: environments)
   end
 
-  def run
+  def run(params: nil)
     validate_required_fields_completed
 
     app_environments = self.send(app.to_sym)
     app_instance_name = app_environments.send(environment.to_sym)
-    instance = Heroku.new(instance_name: app_instance_name)
+    instance = Heroku.new(instance_name: app_instance_name, params: params)
     instance.send(operation.to_sym)
   end
   
@@ -97,18 +97,18 @@ class DaylightRemote
 end
 
 class Heroku
-  attr_accessor :instance_name, :envs
+  attr_accessor :instance_name, :params
 
-  def initialize(instance_name:, envs: nil)
+  def initialize(instance_name:, params: nil)
     @instance_name = instance_name
-    @envs = envs
+    @params = params
   end
 
   def deploy
-    system("git push https://git.heroku.com/#{instance_name}.git develop:main")
+    system("git push https://git.heroku.com/#{instance_name}.git develop:main #{params}")
 end
 
   def rails_console
-    system("heroku run rails c --app #{instance_name}")
+    system("heroku run rails c --app #{instance_name} #{params}")
   end
 end
