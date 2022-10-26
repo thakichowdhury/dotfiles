@@ -1,3 +1,7 @@
+migrate_tasks_over() {
+  eval "ruby /Users/thakichowdhury/Documents/dotfiles/bin/task_manager/task_manager.rb $@"
+}
+
 daylight_remote() {
   eval "ruby /Users/thakichowdhury/Documents/dotfiles/bin/daylight_remote_call.rb $@"
 }
