@@ -40,9 +40,13 @@ nnoremap <C-H> <C-W><C-H>
 " inoremap jk <ESC>
 let mapleader = "\<Space>"
 nmap <leader>o o<Esc>
+" resize buffer
 nmap <leader>r :resize<CR>
+" navigate to left buffer
 nmap <leader>j :bN<CR>
+" navigate to right buffer
 nmap <leader>l :bn<CR>
+" close current buffer
 nmap <leader>k :bd<CR>
 nnoremap <leader>q :q<CR>
 " nmap gd gdzzviw
