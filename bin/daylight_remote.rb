@@ -4,8 +4,9 @@ class DaylightRemote
   attr_reader :operation, :app, :environment
   Environment = Struct.new(:development, :staging, :production)
 
-  def initialize(operation=nil)
+  def initialize(operation: nil, client: nil)
     @operation = operation
+    @client = client
   end
 
   def operation=(input)
@@ -40,8 +41,9 @@ class DaylightRemote
 
     app_environments = self.send(app.to_sym)
     app_instance_name = app_environments.send(environment.to_sym)
-    instance = Heroku.new(instance_name: app_instance_name, params: params)
-    instance.send(operation.to_sym)
+    client.instance_name = app_instance_name
+    client.params = params
+    client.send(operation.to_sym)
   end
   
   private
@@ -59,7 +61,7 @@ class DaylightRemote
       %w(
         daylight_web
         daylight_be
-        daylight_v1
+        daylight_be_v1
       ).freeze
     end
 
@@ -83,7 +85,7 @@ class DaylightRemote
       choices[STDIN.gets.chomp.to_i]
     end
 
-    def daylight_v1
+    def daylight_be_v1
       Environment.new("joindaylight-api-development", "joindaylight-api-staging", "joindaylight-api")
     end
 
@@ -94,12 +96,16 @@ class DaylightRemote
     def daylight_be
       Environment.new("daylight-dev", "daylight-stage", "daylight-prod")
     end
+
+    def client
+      @client
+    end
 end
 
 class Heroku
   attr_accessor :instance_name, :params
 
-  def initialize(instance_name:, params: nil)
+  def initialize(instance_name: nil, params: nil)
     @instance_name = instance_name
     @params = params
   end
