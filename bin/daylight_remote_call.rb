@@ -3,7 +3,7 @@
 require_relative './daylight_remote.rb'
 
 def call_daylight_remote(operation:, app:, environment:, params:)
-  daylight_remote = DaylightRemote.new()
+  daylight_remote = DaylightRemote.new(client: Heroku.new)
 
   daylight_remote.operation = operation || daylight_remote.choose_operation
   daylight_remote.app = app || daylight_remote.choose_app
