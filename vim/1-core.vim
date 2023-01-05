@@ -33,6 +33,7 @@ set hls                                     " highlight all matching phrases
 
 " Move lines
 " https://vim.fandom.com/wiki/Moving_lines_up_or_down
+" https://stackoverflow.com/questions/7501092/can-i-map-alt-key-in-vim/15399297#15399297
 nnoremap ∆ :m .+1<CR>==
 nnoremap ˚ :m .-2<CR>==
 
