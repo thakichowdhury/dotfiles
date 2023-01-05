@@ -31,6 +31,17 @@ set smartcase                               " allow case-sensitive search only i
 set is                                      " show partial matches for a search phrase
 set hls                                     " highlight all matching phrases
 
+" Move lines
+" https://vim.fandom.com/wiki/Moving_lines_up_or_down
+nnoremap ∆ :m .+1<CR>==
+nnoremap ˚ :m .-2<CR>==
+
+inoremap ∆ <Esc>:m .+1<CR>==gi
+inoremap ˚ <Esc>:m .-2<CR>==gi
+
+vnoremap ∆ :m '>+1<CR>gv=gv
+vnoremap ˚ :m '<-2<CR>gv=gv
+
 " Split navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
