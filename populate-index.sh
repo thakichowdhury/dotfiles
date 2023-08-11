@@ -2,7 +2,6 @@
 
 VIMDIR=./vim
 ZSHDIR=./zsh
-PWDLEN="${#PWD}"
 
 declare -a directories=(
   "./vim"
