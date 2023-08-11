@@ -1,8 +1,5 @@
 #!/usr/bin/env sh
 
-VIMDIR=./vim
-ZSHDIR=./zsh
-
 declare -a directories=(
   "./vim"
   "./zsh"
@@ -28,9 +25,10 @@ make_index () {
   done
 }
 
-for d in ${directories[@]}
-do
-  echo "creating index file at $d"
-  make_index $d
-done
-
+populate_index() {
+  for d in ${directories[@]}
+  do
+    echo "creating index file at $d"
+    make_index $d
+  done
+}
