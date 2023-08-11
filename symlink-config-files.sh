@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 # replace system config files with those in the dotfiles directory
-setup_config_files() {
+symlink_config_files() {
  extension=$(echo $1 | cut -c 3-)
  date_and_time=$(date +'%m-%d-%y_%T')
  backup_dir="backup/$date_and_time"
