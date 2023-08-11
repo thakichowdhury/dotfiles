@@ -8,7 +8,8 @@ declare -a directories=(
 # iterates through all the files in given directories
 # and sources them into an index file
 make_index () {
-  for f in $1/*
+  DIR=$1
+  for f in $DIR/*
   do
     if [[ $f =~ "index" ]];
     then
@@ -17,8 +18,8 @@ make_index () {
     else
       file=$(echo $f | cut -c 3-)
       file_absolute_path="$PWD/$file"
-      extension=$(echo $1 | cut -c 3-)
-      index_file="$1/0-index.ignore.$extension"
+      extension=$(echo $DIR | cut -c 3-)
+      index_file="$DIR/0-index.ignore.$extension"
       echo "sourcing from $file_absolute_path"
       echo source $file_absolute_path >> $index_file
     fi
