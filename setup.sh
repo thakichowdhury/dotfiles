@@ -20,9 +20,8 @@ setup_config_files() {
   fi
 
   # create a symlink for the new rc to replace the old rc
-  dotfile_config_path="$PWD/$1/0-index.ignore.$extension"
+  dotfile_config_path="$PWD/$extension/0-index.ignore.$extension"
   ln -s $dotfile_config_path $rc_file_path
-
   echo "Created symlink from $rc_file_path to $dotfile_config_path!"
 }
 
