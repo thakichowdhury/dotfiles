@@ -25,14 +25,3 @@ symlink_config_files() {
  echo "Created symlink from $rc_file_path to $dotfile_config_path!"
 }
 
-# add the included fonts to the local fonts library
-installFonts() {
- cp -r ./public/Fonts ~/Library
-}
-
-# run setup for each directory
-for directory in "${directories[@]}"; do
- setup_config_files $directory
-done
-
-installFonts
