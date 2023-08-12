@@ -2,26 +2,34 @@
 
 # replace system config files with those in the dotfiles directory
 symlink_config_files() {
- extension=$(echo $1 | cut -c 3-)
- date_and_time=$(date +'%m-%d-%y_%T')
- backup_dir="backup/$date_and_time"
+  extension=$1
+  # create current rc file path
+  rc_file_path=~/."${extension}rc"
+  echo "extension: $extension, rc_file_path: $rc_file_path"
 
- # make backup directory if one doesn't exist
- mkdir -p $backup_dir
+#   # backup and remove the current rc file, if one exists
+  create_backups $rc_file_path $extension
 
- # create current rc file path
- rc_file_path=~/."${extension}rc"
+  # create a symlink for the new rc to replace the old rc
+  dotfile_config_path="$ROOT_DIR/$extension/0-index.ignore.$extension"
+  # symlink source_path -> target_path
+  ln -s $dotfile_config_path $rc_file_path
+  echo "Created symlink from $rc_file_path to $dotfile_config_path!"
+}
 
- # backup and remove the current rc file, if one exists
- if [[ -f $rc_file_path ]]
- then
-   cp $rc_file_path "./$backup_dir/backup.$extension"
-   rm $rc_file_path
- fi
+create_backups() {
+  rc_file_path=$1
+  rc_extension="$2rc"
+  date_and_time=$(date +'%m-%d-%y_%T')
+  backup_dir="$ROOT_DIR/backup/$date_and_time"
 
- # create a symlink for the new rc to replace the old rc
- dotfile_config_path="$PWD/$extension/0-index.ignore.$extension"
- ln -s $dotfile_config_path $rc_file_path
- echo "Created symlink from $rc_file_path to $dotfile_config_path!"
+  # make backup directory if one doesn't exist
+  mkdir -p $backup_dir
+
+  if [[ -f $rc_file_path ]]
+  then
+    cp $rc_file_path "./$backup_dir/backup.$rc_extension"
+    rm $rc_file_path
+  fi
 }
 

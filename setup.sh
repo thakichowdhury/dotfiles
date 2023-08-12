@@ -16,13 +16,12 @@ declare -a config_directories=(
   "zsh"
   )
 
-echo "SETUP// ROOT_DIR: $ROOT_DIR"
 # create bridge files for each config
 populate_index
-# # create symlink from each dotfile config to root config
-# for directory in "${directories[@]}"; do
-#  symlink_config_files $directory
-# done
+# create symlink from each dotfile config to root config
+for directory in "${config_directories[@]}"; do
+ symlink_config_files $directory
+done
 # # install desired fonts
 # install_fonts
 
