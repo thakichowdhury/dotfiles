@@ -22,6 +22,6 @@ populate_index
 for directory in "${config_directories[@]}"; do
  symlink_config_files $directory
 done
-# # install desired fonts
-# install_fonts
+# install desired fonts
+install_fonts
 
